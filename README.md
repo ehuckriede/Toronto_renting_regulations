@@ -14,7 +14,13 @@ Second, summarize your results concisely. Make use of subheaders where appropria
 
 ## Repository overview
 
-Provide an overview of the directory structure and files.
+During this project, multiple directories were used. These directories should be run in the following order:
+
+1. data/Data.R
+2. code/preparation.R
+3. code/analysis.R
+4. code/figures.R
+5. Knit report
 
 ## Running instructions
 
