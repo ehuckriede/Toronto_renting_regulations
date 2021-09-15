@@ -1,6 +1,6 @@
-# Short project title
+# The influence of Toronto's 2020 short-term rental market regulations on its AirBNB market.
 
-__Long project title, e.g., research question__
+__This repository belongs to our research into the effect of Toronto's operation to recover the housing market by implementing a new set of regulations on September 10 2020. This research is performed as a part of the Data Preparation and Workflow Management course at Tilburg University__
 
 ## Motivation
 
