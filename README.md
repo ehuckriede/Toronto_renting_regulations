@@ -1,6 +1,6 @@
 # The influence of Toronto's 2020 short-term rental market regulations on its AirBNB market.
 
-__This repository belongs to our research into the effect of Toronto's operation to recover the housing market by implementing a new set of regulations on September 10 2020. This research is performed as a part of the Data Preparation and Workflow Management course at Tilburg University. In this research we answer the following research question:__
+__This repository belongs to our research into the effect of Toronto's operation to recover the housing market by implementing a new set of regulations on September 10 2020. This research is performed as a part of the [Data Preparation and Workflow Management](https://dprep.hannesdatta.com) course at Tilburg University. In this research we answer the following research question:__
 
 In what way did the implemented regulations influence the listings on AirBNB in Toronto? 
 
