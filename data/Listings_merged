@@ -1,3 +1,8 @@
+#Load data
+
+listings0820 <- read.csv(file = 'data/listings0820.csv')
+listings0821 <- read.csv(file = 'data/listings0821.csv') 
+
 #Create dummy variable 'regulation' in both datasets. 
 # Dummy variable = 0 for dataset before regulation
 # Dummy variable = 1 for dataset after regulation
