@@ -25,6 +25,10 @@ Second, summarize your results concisely. Make use of subheaders where appropria
 
 ## Repository overview
 
+Provide an overview of the directory structure and files.
+
+## Running instructions
+
 During this project, multiple directories were used. These directories should be run in the following order:
 
 1. data/Data.R
@@ -32,10 +36,6 @@ During this project, multiple directories were used. These directories should be
 3. code/analysis.R
 4. code/figures.R
 5. Knit report
-
-## Running instructions
-
-Explain to potential users how to run/replicate your workflow. Touch upon, if necessary, the required input data, which (secret) credentials are required (and how to obtain them), which software tools are needed to run the workflow (including links to the installation instructions), and how to run the workflow. Make use of subheaders where appropriate.
 
 ## More resources
 
