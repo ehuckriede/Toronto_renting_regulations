@@ -2,7 +2,7 @@
 
 This repository belongs to our research into the effect of Toronto's operation to recover the housing market by implementing a new set of regulations on September 10, 2020. This research is performed as a part of the [Data Preparation and Workflow Management](https://dprep.hannesdatta.com) course at Tilburg University. In this research we answer the following research question:
 
-__In what way did the implemented regulations influence the prices of the listings on AirBnB in Toronto? 
+__In what way did the implemented regulations influence the prices of the listings on AirBnB in Toronto?__
 
 ## Motivation
 
