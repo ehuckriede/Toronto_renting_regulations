@@ -6,25 +6,22 @@ __How did the implemented rental market regulations in Toronto affect rental pri
 
 ## Motivation
 
-As stated above, the city of Toronto implemented some [new rules](https://toronto.citynews.ca/2020/08/25/toronto-introduces-new-rules-for-airbnb-other-short-term-rental-platforms/) for the short term rental market, which also affects AirBnB operators. The new rules imply the following:
+Many cities around the world are dealing with increasing housing prices due to the attractiveness of short term rentals. In order to deal with this problem, local governments in cities like [Amsterdam](https://www.reuters.com/article/us-netherlands-airbnb-amsterdam-idUSKBN2B81NS), [Barcelona](https://www.nytimes.com/2021/09/22/travel/barcelona-airbnb.html) and [Atlanta](https://www.ajc.com/news/atlanta-news/atlanta-delays-new-rules-for-airbnb-other-short-term-rentals/HDTLILUK2NHEPEW5LRABO3Z7FA/) have implemented new regulations to make the short term rental market less attractive in the past year.  
+
+The city of Toronto was dealing with the same issue and implemented some [new rules](https://toronto.citynews.ca/2020/08/25/toronto-introduces-new-rules-for-airbnb-other-short-term-rental-platforms/) for the short term rental market, which also affects AirBnB operators, in september last year. By examing the results of these regulations this could form as a case for other cities dealing with the same issues as of now.
+
+The new rules in Toronto implied the following:
 - You have to register your AirBnB unit at the City of Toronto. After you have registered, you have to pay a $50 renewal fee per year. 
 - The registered AirBnB owners have to pay a Municipal Accommodation Tax of 4% on a quarterly basis. 
 - You will not be able to list properties on AirBnB if it is not your primary residence. This means that you can only AirBnB your home, whether that is a part of it or all of it. 
 
-Especially the last rule shakes up a lot among the AirBnB community, as it means that a lot of people cannot list their investement units on AirBnB anymore. A lot of income for many residents of Toronto will be lost. But why would the City of Toronto implement such a rule? Well, Toronto is dealing with some issues in their current housing market:
-- The housing market in Toronto keeps getting more expensive. 
-- Especially the prices for long-term rental housing were becoming sky-high. 
-- People started complaining about these difficulties to find a place to live, some even moved away from the city.
-- Toronto is dealing with these so-called "ghost hotels". These are properties which are owned by a landlord who owns a lot of units, but who does not actually live there. 
+After the implementation of these rules, fewer listings will probably be available on AirBnB. This can result in three scenarios for the price of the listings: 
 
-With implementation of these rules, the city aims to remove these ghost hotels from the city, which will free a lot of properties and hopefully, improve the affordability and availability of housing. 
+- The price of the listings could increase
+- The price of the listings could decrease
+- The price of the listings could not change significantly
 
-After the implementation of these rules, fewer listings will probably be available on AirBnB. This can result in two scenarios: 
-
-- It is possible that the prices of the AirBnB listings in Toronto won't increase significantly, because the listings on AirBnB will only be primary listings: people are renting their own house, so no large extra investments are needed. No large investments also mean that nothing large has to be earned back by renting it out. If yes, this might have its influence on the tourism market. 
-- The decrease in supply can also lead to a price increase. A price increase can affect the tourist market. When AirBnB prices are higher, tourists are less likely to choose Toronto as their destination; other cities might be cheaper. With lesser toursists coming to Toronto, not only the Toronto AirBnB market will be affected, but the city will be affected in many ways. Restaurants, entertainment, public transportation, everything will suffer if lesser toursists are drawn to the city.
-
-As the regulations can result in two totally different scenario's it is important that the effects of these regulations are examined. If the prices are higher and tourism will be affected, the City of Toronto can anticipate and make sure Toronto will be an attractive city for tourists nevertheless!  
+As the regulations can these three different scenario's it is important that the effects of these regulations are examined. With these results we could build up a good case whether these regulations had the intended effect 
 
 ## Method and results
 
