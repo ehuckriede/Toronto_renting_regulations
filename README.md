@@ -18,10 +18,10 @@ The new rules in Toronto implied the following:
 After the implementation of these rules, fewer listings will probably be available on AirBnB. This can result in three scenarios for the price of the listings: 
 
 - The price of the listings could increase
-- The price of the listings could decrease
 - The price of the listings could not change significantly
+- The price of the listings could decrease (while not very likely)
 
-As the regulations can these three different scenario's it is important that the effects of these regulations are examined. With these results we could build up a good case whether these regulations had the intended effect 
+As the regulations can these three different scenario's it is important that the effects of these regulations are examined. So we aim to conclude whether these regulations had the intended effect in Toronto. With these results other cities facing the same prolem, might implement or might not implement similar short term rental market regulations. 
 
 ## Method and results
 
