@@ -1,7 +1,7 @@
 # Do rental market regulations really work? The Toronto case.
 
 <p align="center">
-  <img width="600" height="200" src="https://www.cpomanagement.ca/wp-content/uploads/2020/03/airbnb.jpg">
+  <img width="600" height="400" src="https://www.cpomanagement.ca/wp-content/uploads/2020/03/airbnb.jpg">
 </p>
 
 This repository belongs to our research into the effect of Toronto's operation to recover the housing market by implementing a new set of regulations on September 10, 2020. This research is performed as a part of the [Data Preparation and Workflow Management](https://dprep.hannesdatta.com) course at Tilburg University. In this research we answer the following research question:
