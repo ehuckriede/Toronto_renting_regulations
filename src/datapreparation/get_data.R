@@ -2,6 +2,9 @@
 library(googledrive)
 library(readr)
 
+dir.create('data')
+
+
 #listings august 2020
 data_id <- "1f3L-KHmC89xcn7LIMpGsfwh8zMu8orPE"
 out_file <- "data/listings0820.csv"
@@ -73,6 +76,6 @@ drive_download(
     overwrite = TRUE)
 
 #Save to file
-reviews0821 <- read.csv("data/reviews0821.csv")
+reviews0821 <- read.csv("data/reviews0821.csv") # --> move these thigns to the input block of your next pipeline script
 
 
