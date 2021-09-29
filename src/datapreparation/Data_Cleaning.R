@@ -2,7 +2,7 @@
 library(dplyr)
 
 # Load the data
-all_data <- read.csv(file = '../../gen/datapreparation/output/Transformed_data.csv')
+all_data <- read.csv(file = 'gen/data-preparation/input/Transformed_data.csv')
 
 # Check for outliers
 summary(all_data)
@@ -17,4 +17,5 @@ cols_to_drop = c('id', 'name', 'host_id', 'host_name', 'neighbourhood_group', 'n
 all_data_cleaned = all_data[, which(!colnames(all_data)%in%cols_to_drop)]
 
 # Write output
-write.csv(all_data_cleaned, "../../gen/datapreparation/output/Cleaned_data.csv", row.names = FALSE)
+dir.create('gen/data-preparation/output')
+write.csv(all_data_cleaned, "gen/data-preparation/output/Cleaned_data.csv", row.names = FALSE)

@@ -1,6 +1,6 @@
 # Load Data
-listings0820 <- read.csv("../../data/listings0820.csv")
-listings0821 <- read.csv("../../data/listings0821.csv")
+listings0820 <- read.csv("data/listings0820.csv")
+listings0821 <- read.csv("data/listings0821.csv")
 
 #Create dummy variable 'regulation' in both datasets. 
 # Dummy variable = 0 for dataset before regulation
@@ -19,5 +19,8 @@ listings_merged$regulation <- as.factor(listings_merged$regulation)
 
 # Write output
 
-write.csv(listings_merged, "../../gen/datapreparation/output/Merged_data.csv", row.names = FALSE)
+dir.create('gen')
+dir.create('gen/data-preparation')
+dir.create('gen/data-preparation/input')
+write.csv(listings_merged, "gen/data-preparation/input/Merged_data.csv", row.names = FALSE)
 
