@@ -1,5 +1,5 @@
 # Load the data
-all_data <- read.csv(file = 'gen/data-preparation/input/merged_data.csv')
+all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 
 # Divide the 140 neighbourhoods into their corresponding 6 boroughs
 
@@ -81,4 +81,4 @@ all_data$Private_room <- as.numeric(all_data$room_type == "Private room")
 all_data$Shared_room <- as.numeric(all_data$room_type == "Shared room")
 
 # Write output
-write.csv(all_data, "gen/data-preparation/input/Transformed_data.csv", row.names = FALSE)
+write.csv(all_data, "../../gen/data-preparation/input/Transformed_data.csv", row.names = FALSE)
