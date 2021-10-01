@@ -40,13 +40,13 @@ Provide an overview of the directory structure and files.
 
 ## Running instructions
 
-During this project, multiple directories were used. These directories should be run in the following order:
+During this project, multiple subdirectories were used. Within the subdirectory 'src', the code is stored within R scripts. These scripts can be run automatically by running the makefile within the repository. [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) will run the scripts in the following order:
 
-1. data/Data.R
-2. code/preparation.R
-3. code/analysis.R
-4. code/figures.R
-5. Knit report
+1. src/datapreparation/get_data.R
+2. src/datapreparation/Data_Merging.R
+3. src/datapreparation/Data_Transformation.R
+4. src/datapreparation/Data_Cleaning.R
+5. ...
 
 ## More resources
 
