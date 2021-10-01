@@ -13,9 +13,11 @@ all_data <- all_data %>%
 
 # Removing columns
 
-cols_to_drop = c('id', 'name', 'host_id', 'host_name', 'neighbourhood_group', 'neighbourhood', 'latitude', 'longitude', 'room_type', 'minimum_nights', 'number_of_reviews_ltm', 'license', 'last_review', 'reviews_per_month', 'calculated_host_listings_count', 'availability_365' )
-all_data_cleaned = all_data[, which(!colnames(all_data)%in%cols_to_drop)]
+all_data_cleaned <- all_data[ -c(1:9, 11:16, 18:19) ]
+summary(all_data_cleaned)
+
+# Checking for missing values
+sum(is.na(all_data_cleaned))
 
 # Write output
-dir.create('../../gen/data-preparation/output')
-write.csv(all_data_cleaned, "../../gen/data-preparation/output/Cleaned_data.csv", row.names = FALSE)
+write.csv(all_data_cleaned, "../../data/Cleaned_data.csv", row.names = FALSE)
