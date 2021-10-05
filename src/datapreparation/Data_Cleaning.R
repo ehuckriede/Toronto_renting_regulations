@@ -28,5 +28,6 @@ summary(all_data_cleaned)
 sum(is.na(all_data_cleaned))
 
 # Write output
+dir.create('../../gen/data-preparation/output/', recursive = T)
 
-write.csv(all_data_cleaned, "../../data/Cleaned_data.csv", row.names = FALSE)
+write.csv(all_data_cleaned, "../../gen/data-preparation/output/Cleaned_data.csv", row.names = FALSE)
