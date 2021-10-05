@@ -13,10 +13,10 @@ all_data <- all_data %>%
 
 # Transforming price so that it can be a numerical variable instead of character
 
-all_data$price2 <- (gsub("\\,", "", all_data$price))
-all_data$price2 <- (gsub("\\$", "", all_data$price2))
-all_data$price2 <- as.numeric(all_data$price2)
-sum(is.na(all_data$price2))
+all_data$price <- (gsub("\\,", "", all_data$price))
+all_data$price <- (gsub("\\$", "", all_data$price))
+all_data$price <- as.numeric(all_data$price)
+sum(is.na(all_data$price))
 
 # Removing columns
 
