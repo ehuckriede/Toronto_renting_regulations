@@ -13,7 +13,7 @@ all_data <- all_data %>%
 
 # Removing columns
 
-all_data_cleaned <- all_data[ -c(1:9, 11:16, 18:19) ]
+all_data_cleaned <- all_data[ -c(1:39, 41:74) ]
 summary(all_data_cleaned)
 
 # Checking for missing values
