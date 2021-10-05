@@ -28,7 +28,7 @@ Etobicoke <- c("West Humber-Clairville", "Mount Olive-Silverstone-Jamestown",
                "Edenbridge-Humber Valley", "Princess-Rosethorn", 
                "Eringate-Centennial-West Deane", "Markland Wood", 
                "Etobicoke West Mall", "Islington-City Centre West", 
-               "Kingsway South", "Stonegate-Queensway", "Mimico", "New Toronto", 
+               "Kingsway South", "Stonegate-Queensway", "Mimico (includes Humber Bay Shores)", "New Toronto", 
                "Long Branch", "Alderwood")
 
 North_York <- c("Humber Summit", "Humbermede", "Pelmo Park-Humberlea", 
@@ -38,7 +38,7 @@ North_York <- c("Humber Summit", "Humbermede", "Pelmo Park-Humberlea",
                 "Englemount-Lawrence", "Clanton Park", "Bathurst Manor", 
                 "Westminster-Branson", "Newtonbrook West", "Willowdale West", 
                 "Lansing-Westgate", "Bedford Park-Nortown", 
-                "St. Andrew-Windfields", "Bridle Path-Sunnybrook-York Mills", 
+                "St.Andrew-Windfields", "Bridle Path-Sunnybrook-York Mills", 
                 "Banbury-Don Mills", "Victoria Village", "Flemingdon Park", 
                 "Parkwoods-Donalda", "Pleasant View", "Don Valley Village", 
                 "Hillcrest Village", "	Bayview Woods-Steeles", 
@@ -46,8 +46,8 @@ North_York <- c("Humber Summit", "Humbermede", "Pelmo Park-Humberlea",
                 "Henry Farm")
 
 East_York <- c("O'Connor-Parkview", "Thorncliffe Park", "Leaside-Bennington", 
-               "Broadview North", "Old East York", "Danforth - East York", 
-               "Woodbine-Lumsden", "Crescent Town")
+               "Broadview North", "Old East York", "Danforth East York", 
+               "Woodbine-Lumsden", "Taylor-Massey")
 
 York <- c("Humewood-Cedarvale", "Oakwood Village", "Briar Hill-Belgravia", 
           "Caledonia-Fairbank", "Keelesdale-Eglinton West", "Rockcliffe-Smythe", 
@@ -55,7 +55,7 @@ York <- c("Humewood-Cedarvale", "Oakwood Village", "Briar Hill-Belgravia",
           "Mount Dennis")
 
 Scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan", 
-                 "Wexford-Maryvale", "Clairlea-Birchmount", "Oakridge", 
+                 "Wexford/Maryvale", "Clairlea-Birchmount", "Oakridge", 
                  "Birchcliffe-Cliffside", "Cliffcrest", "	Kennedy Park", 
                  "Ionview", "Dorset Park", "Bendale", 
                  "Agincourt South-Malvern West", "Agincourt North", "Milliken", 
@@ -66,12 +66,12 @@ Scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan",
 
 # Make a dummy for every borough
 
-all_data$Old_Town <- as.numeric(all_data$neighbourhood %in% Old_Town)
-all_data$Etobicoke <- as.numeric(all_data$neighbourhood %in% Etobicoke)
-all_data$North_York <- as.numeric(all_data$neighbourhood %in% North_York)
-all_data$East_York <- as.numeric(all_data$neighbourhood %in% East_York)
-all_data$York <- as.numeric(all_data$neighbourhood %in% York)
-all_data$Scarborough <- as.numeric(all_data$neighbourhood %in% Scarborough)
+all_data$Old_Town <- as.numeric(all_data$neighbourhood_cleansed %in% Old_Town)
+all_data$Etobicoke <- as.numeric(all_data$neighbourhood_cleansed %in% Etobicoke)
+all_data$North_York <- as.numeric(all_data$neighbourhood_cleansed %in% North_York)
+all_data$East_York <- as.numeric(all_data$neighbourhood_cleansed %in% East_York)
+all_data$York <- as.numeric(all_data$neighbourhood_cleansed %in% York)
+all_data$Scarborough <- as.numeric(all_data$neighbourhood_cleansed %in% Scarborough)
 
 # Make a dummy for every room type
 
