@@ -22,5 +22,5 @@ listings_merged$regulation <- as.factor(listings_merged$regulation)
 dir.create('../../gen')
 dir.create('../../gen/data-preparation')
 dir.create('../../gen/data-preparation/input')
-write.csv(listings_merged, "../../gen/data-preparation/input/Merged_data.csv", row.names = FALSE)
+write.csv(listings_merged, "../../gen/data-preparation/input/merged_data.csv", row.names = FALSE)
 
