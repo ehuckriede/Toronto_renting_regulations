@@ -3,7 +3,7 @@ all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 
 # Divide the 140 neighbourhoods into their corresponding 6 boroughs
 
-Old_Town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor", 
+old_Town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor", 
               "Greenwood-Coxwell", "Danforth", "Playter Estates-Danforth", 
                                          "North Riverdale", "Blake-Jones", "South Riverdale", 
                                          "Cabbagetown-South St.James Town", "Regent Park", "Moss Park", 
@@ -21,7 +21,7 @@ Old_Town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor",
                                          "Forest Hill North", "Lawrence Park South", "Mount Pleasant West", 
                                          "Lawrence Park North")
 
-Etobicoke <- c("West Humber-Clairville", "Mount Olive-Silverstone-Jamestown", 
+etobicoke <- c("West Humber-Clairville", "Mount Olive-Silverstone-Jamestown", 
                "Thistletown-Beaumond Heights", "Rexdale-Kipling", 
                "Elms-Old Rexdale", "Kingsview Village-The Westway", 
                "Willowridge-Martingrove-Richview", "Humber Heights-Westmount", 
@@ -31,7 +31,7 @@ Etobicoke <- c("West Humber-Clairville", "Mount Olive-Silverstone-Jamestown",
                "Kingsway South", "Stonegate-Queensway", "Mimico (includes Humber Bay Shores)", "New Toronto", 
                "Long Branch", "Alderwood")
 
-North_York <- c("Humber Summit", "Humbermede", "Pelmo Park-Humberlea", 
+north_york <- c("Humber Summit", "Humbermede", "Pelmo Park-Humberlea", 
                 "Black Creek", "Glenfield-Jane Heights", "Downsview-Roding-CFB", 
                 "York University Heights", "Rustic", "Maple Leaf", 
                 "Brookhaven-Amesbury", "Yorkdale-Glen Park", 
@@ -45,16 +45,16 @@ North_York <- c("Humber Summit", "Humbermede", "Pelmo Park-Humberlea",
                 "Newtonbrook East", "Willowdale East", "Bayview Village", 
                 "Henry Farm")
 
-East_York <- c("O'Connor-Parkview", "Thorncliffe Park", "Leaside-Bennington", 
+east_york <- c("O'Connor-Parkview", "Thorncliffe Park", "Leaside-Bennington", 
                "Broadview North", "Old East York", "Danforth East York", 
                "Woodbine-Lumsden", "Taylor-Massey")
 
-York <- c("Humewood-Cedarvale", "Oakwood Village", "Briar Hill-Belgravia", 
+york <- c("Humewood-Cedarvale", "Oakwood Village", "Briar Hill-Belgravia", 
           "Caledonia-Fairbank", "Keelesdale-Eglinton West", "Rockcliffe-Smythe", 
           "Beechborough-Greenbrook", "Weston", "Lambton Baby Point", 
           "Mount Dennis")
 
-Scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan", 
+scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan", 
                  "Wexford/Maryvale", "Clairlea-Birchmount", "Oakridge", 
                  "Birchcliffe-Cliffside", "Cliffcrest", "	Kennedy Park", 
                  "Ionview", "Dorset Park", "Bendale", 
@@ -66,19 +66,19 @@ Scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan",
 
 # Make a dummy for every borough
 
-all_data$Old_Town <- as.numeric(all_data$neighbourhood_cleansed %in% Old_Town)
-all_data$Etobicoke <- as.numeric(all_data$neighbourhood_cleansed %in% Etobicoke)
-all_data$North_York <- as.numeric(all_data$neighbourhood_cleansed %in% North_York)
-all_data$East_York <- as.numeric(all_data$neighbourhood_cleansed %in% East_York)
-all_data$York <- as.numeric(all_data$neighbourhood_cleansed %in% York)
-all_data$Scarborough <- as.numeric(all_data$neighbourhood_cleansed %in% Scarborough)
+all_data$old_Town <- as.numeric(all_data$neighbourhood_cleansed %in% old_Town)
+all_data$etobicoke <- as.numeric(all_data$neighbourhood_cleansed %in% etobicoke)
+all_data$north_York <- as.numeric(all_data$neighbourhood_cleansed %in% north_york)
+all_data$east_york <- as.numeric(all_data$neighbourhood_cleansed %in% east_york)
+all_data$york <- as.numeric(all_data$neighbourhood_cleansed %in% york)
+all_data$scarborough <- as.numeric(all_data$neighbourhood_cleansed %in% scarborough)
 
 # Make a dummy for every room type
 
-all_data$Entire_home_apt <- as.numeric(all_data$room_type == "Entire home/apt")
-all_data$Hotel_room <- as.numeric(all_data$room_type == "Hotel room")
-all_data$Private_room <- as.numeric(all_data$room_type == "Private room")
-all_data$Shared_room <- as.numeric(all_data$room_type == "Shared room")
+all_data$entire_home_apt <- as.numeric(all_data$room_type == "Entire home/apt")
+all_data$hotel_room <- as.numeric(all_data$room_type == "Hotel room")
+all_data$private_room <- as.numeric(all_data$room_type == "Private room")
+all_data$shared_room <- as.numeric(all_data$room_type == "Shared room")
 
 # Write output
-write.csv(all_data, "../../gen/data-preparation/input/Transformed_data.csv", row.names = FALSE)
+write.csv(all_data, "../../gen/data-preparation/input/transformed_data.csv", row.names = FALSE)

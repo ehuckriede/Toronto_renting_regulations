@@ -2,7 +2,7 @@
 library(dplyr)
 
 # Load the data
-all_data <- read.csv(file = '../../gen/data-preparation/input/Transformed_data.csv')
+all_data <- read.csv(file = '../../gen/data-preparation/input/transformed_data.csv')
 
 # Check for outliers
 summary(all_data)
@@ -30,4 +30,4 @@ sum(is.na(all_data_cleaned))
 # Write output
 dir.create('../../gen/data-preparation/output/', recursive = T)
 
-write.csv(all_data_cleaned, "../../gen/data-preparation/output/Cleaned_data.csv", row.names = FALSE)
+write.csv(all_data_cleaned, "../../gen/data-preparation/output/cleaned_data.csv", row.names = FALSE)
