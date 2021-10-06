@@ -54,4 +54,4 @@ Point interested users to any related literature and/or documentation.
 
 ## About
 
-Explain who has contributed to the repository. You can say it has been part of a class you've taken at Tilburg University.
+This repository is created for the course "Skills: Data Preparation & Workflow Management", given by Hannes Datta, at Tilburg School of Economics and Management. Eveline Huckriede, Julie Habets, Marit Verbruggen, Teun Geurts and Ilse van den Bosch contributed to this repository.
