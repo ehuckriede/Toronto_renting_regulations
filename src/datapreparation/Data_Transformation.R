@@ -3,7 +3,7 @@ all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 
 # Divide the 140 neighbourhoods into their corresponding 6 boroughs
 
-old_Town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor", 
+old_town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor", 
               "Greenwood-Coxwell", "Danforth", "Playter Estates-Danforth", 
                                          "North Riverdale", "Blake-Jones", "South Riverdale", 
                                          "Cabbagetown-South St.James Town", "Regent Park", "Moss Park", 
@@ -66,7 +66,7 @@ scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan",
 
 # Make a dummy for every borough
 
-all_data$old_Town <- as.numeric(all_data$neighbourhood_cleansed %in% old_Town)
+all_data$old_town <- as.numeric(all_data$neighbourhood_cleansed %in% old_town)
 all_data$etobicoke <- as.numeric(all_data$neighbourhood_cleansed %in% etobicoke)
 all_data$north_York <- as.numeric(all_data$neighbourhood_cleansed %in% north_york)
 all_data$east_york <- as.numeric(all_data$neighbourhood_cleansed %in% east_york)
