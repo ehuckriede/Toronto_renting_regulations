@@ -4,6 +4,9 @@ library(dplyr)
 # Load the data
 cleaned_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
 
+# Make dummy variable a factor
+cleaned_data$regulation <- as.factor(cleaned_data$regulation)
+
 # Summarize data and state what types of variables we have
 summary(cleaned_data)
 # price = DV = metric
