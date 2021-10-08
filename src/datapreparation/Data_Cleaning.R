@@ -4,6 +4,9 @@ library(dplyr)
 # Load the data
 all_data <- read.csv(file = '../../gen/data-preparation/input/transformed_data.csv')
 
+# Make dummy variable a factor
+all_data$regulation <- as.factor(all_data$regulation)
+
 # Check for outliers
 summary(all_data)
 
