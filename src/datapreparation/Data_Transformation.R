@@ -68,7 +68,7 @@ scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan",
 
 all_data$old_town <- as.numeric(all_data$neighbourhood_cleansed %in% old_town)
 all_data$etobicoke <- as.numeric(all_data$neighbourhood_cleansed %in% etobicoke)
-all_data$north_York <- as.numeric(all_data$neighbourhood_cleansed %in% north_york)
+all_data$north_york <- as.numeric(all_data$neighbourhood_cleansed %in% north_york)
 all_data$east_york <- as.numeric(all_data$neighbourhood_cleansed %in% east_york)
 all_data$york <- as.numeric(all_data$neighbourhood_cleansed %in% york)
 all_data$scarborough <- as.numeric(all_data$neighbourhood_cleansed %in% scarborough)
