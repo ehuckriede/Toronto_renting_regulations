@@ -12,10 +12,16 @@ summary(cleaned_data)
 ## Neighbourhoods: Old_Town, Etobicoke, North_York, East_York, York & Scarborough
 ## Type of rooms: Entire_room_apt, Hotel_room, Private_room & Shared_room
 
-# Set one dummy variable of the neighbourhoods to zero and one of the roomtypes to zero since the values of all neighbourhoods and roomtypes will always add up to 1
-cleaned_data$scarborough <- 0
-cleaned_data$shared_room <- 0
+# Filter on regulations
+cleaned_data_1 <- cleaned_data %>%
+  filter(regulation == 1)
+cleaned_data_0 <- cleaned_data %>%
+  filter(regulation == 0)
+sum(cleaned_data_0$old_town) - sum(cleaned_data_1$old_town)
+sum(cleaned_data_0$etobicoke) - sum(cleaned_data_1$etobicoke)
+sum(cleaned_data_0$north_york) - sum(cleaned_data_1$north_york)
+sum(cleaned_data_0$entire_home_apt) - sum(cleaned_data_1$entire_home_apt)
 
 # Run analysis with regression
-price_lm <- lm(price ~ regulation + old_town + etobicoke + north_york + east_york + york + scarborough + entire_home_apt + hotel_room + private_room + shared_room, cleaned_data)
+price_lm <- lm(price ~ regulation + old_town + etobicoke + north_york + east_york + york + entire_home_apt + hotel_room + private_room, cleaned_data)
 summary(price_lm)
