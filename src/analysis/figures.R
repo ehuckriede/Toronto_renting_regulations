@@ -16,6 +16,7 @@ roomtype_price <- all_data %>%
   group_by(room_type, regulation) %>%
   summarise(price = mean(price))
 
+pdf("../../gen/analysis/output/plot_prices.pdf")
 roomtype_price %>%
   ggplot(aes(x = room_type, y = price, fill = regulation)) +
   geom_bar(stat = "identity", position = "dodge2") +
@@ -24,4 +25,5 @@ roomtype_price %>%
   ggtitle("Price per Room Type", subtitle = "Before and After Regulation") +
   guides(fill = guide_legend(title = "Regulation")) +
   theme_minimal()
+dev.off()
   
