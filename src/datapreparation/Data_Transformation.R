@@ -89,10 +89,10 @@ all_data$host_since_dummy <- ifelse(all_data$host_since > as.Date("2016-05-19", 
 table(all_data$host_response_time)
 
 # Make a dummy for variable "host_is_superhost"
-all_data$host_is_superhost <- as.numeric(all_data$host_is_superhost == "t")
+all_data$superhost_dummy <- as.numeric(all_data$host_is_superhost == "t")
 
 # Make a dummy for "host_identity_verified"
-all_data$host_identity_verified <- as.numeric(all_data$host_identity_verified == "t")
+all_data$identity_verified_dummy <- as.numeric(all_data$host_identity_verified == "t")
 
 # Write output
 write.csv(all_data, "../../gen/data-preparation/input/transformed_data.csv", row.names = FALSE)
