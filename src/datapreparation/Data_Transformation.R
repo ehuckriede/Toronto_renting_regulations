@@ -1,11 +1,7 @@
 # Load the data
 all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 
-# Make dummy variable a factor
-all_data$regulation <- as.factor(all_data$regulation)
-
 # Divide the 140 neighbourhoods into their corresponding 6 boroughs
-
 old_town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor", 
               "Greenwood-Coxwell", "Danforth", "Playter Estates-Danforth", 
                                          "North Riverdale", "Blake-Jones", "South Riverdale", 
@@ -68,7 +64,6 @@ scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan",
 
 
 # Make a dummy for every borough
-
 all_data$old_town <- as.numeric(all_data$neighbourhood_cleansed %in% old_town)
 all_data$etobicoke <- as.numeric(all_data$neighbourhood_cleansed %in% etobicoke)
 all_data$north_york <- as.numeric(all_data$neighbourhood_cleansed %in% north_york)
@@ -77,7 +72,6 @@ all_data$york <- as.numeric(all_data$neighbourhood_cleansed %in% york)
 all_data$scarborough <- as.numeric(all_data$neighbourhood_cleansed %in% scarborough)
 
 # Make a dummy for every room type
-
 all_data$entire_home_apt <- as.numeric(all_data$room_type == "Entire home/apt")
 all_data$hotel_room <- as.numeric(all_data$room_type == "Hotel room")
 all_data$private_room <- as.numeric(all_data$room_type == "Private room")
