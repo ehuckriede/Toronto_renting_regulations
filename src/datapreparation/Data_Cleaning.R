@@ -4,9 +4,6 @@ library(dplyr)
 # Load the data
 all_data <- read.csv(file = '../../gen/data-preparation/input/transformed_data.csv')
 
-# Make dummy variable a factor
-all_data$regulation <- as.factor(all_data$regulation)
-
 # Check for outliers
 summary(all_data)
 
@@ -31,4 +28,3 @@ sum(is.na(all_data_cleaned))
 dir.create('../../gen/data-preparation/output/', recursive = T)
 
 write.csv(all_data_cleaned, "../../gen/data-preparation/output/cleaned_data.csv", row.names = FALSE)
-
