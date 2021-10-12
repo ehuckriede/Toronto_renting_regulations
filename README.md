@@ -59,7 +59,15 @@ During this project, multiple subdirectories were used. Within the subdirectory 
 
 ## More resources
 
-Point interested users to any related literature and/or documentation.
+If you are interested in the topic of regulations in the short term rental market, the following articles may be interesting to read:
+
+- C, S. (n.d.). Why did it not work? reflections on regulating airbnb and the complexity and agency of platform capitalism. Geographica Helvetica, 75, 253–257. https://doi-org.ru.idm.oclc.org/10.5194/gh-75-253-2020
+
+This article provides an overview of issues in the current short term, which: "Helps us to understand some of the conflicts over Airbnb and the pitfalls with current forms of regulation on the one side as well as showing the complexity and agency of short-term rentals on the other".
+
+- Koster, H. R. A., van Ommeren, J., &amp; Volkhausen, N. (2021). Short-term rentals and the housing market: quasi-experimental evidence from airbnb in los angeles. Journal of Urban Economics, 124. https://doi-org.ru.idm.oclc.org/10.1016/j.jue.2021.103356
+
+This article addresses a similar case to ours, namely the case of Los Angeles County. It studies the effects of regulation on the housing market using a quasi-experimental research design. 18 out of 88 cities in Los Angeles County have implemented similar regulations as we see in Toronto and it provides clear results. 
 
 ## About
 
