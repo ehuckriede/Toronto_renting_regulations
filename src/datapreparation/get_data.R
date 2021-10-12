@@ -21,14 +21,3 @@ drive_download(
     as_id(data_id2), 
     path = out_file2, 
     overwrite = TRUE)
-
-
-#Starting on making a loop
-#data_id <- list("1f3L-KHmC89xcn7LIMpGsfwh8zMu8orPE", "11Xy7UtyZaYsOfU4xIDeLA_syv1WFeDV4")
-#out_file <- list("data/listings0820.csv", "data/listings0821.csv")
-
-# for (data in data_id) {
- #  drive_download(
-  #      as_id(data_id), 
-   #     path = out_file, 
-    #    overwrite = TRUE)}}
