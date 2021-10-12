@@ -36,7 +36,16 @@ Second, summarize your results concisely. Make use of subheaders where appropria
 
 ## Repository overview
 
-Provide an overview of the directory structure and files.
+This repository contains the following files/folders:
+
+- "src" folder: This folder includes all the code that is needed to download, transform and analyze the data of [Inside AirBnb](http://insideairbnb.com/toronto). Within the "src" folder you will find subfolders seperating between data preparation, analyzing and paper. In these subfolders you will find all the code to run the corresponding folder as well as a makefile per step. This makefile will run all code included in the specific folder instead of you manually loading every script, which will save a lot of time.   
+
+- Gitignore: This file specifies files that should be ignored/untracked.
+
+- .Rproj-file: File in which some settings are specified.
+
+- README.md-file: The file you are currently viewing, which describes the repository and how to run it.
+
 
 ## Running instructions
 
