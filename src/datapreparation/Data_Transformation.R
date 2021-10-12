@@ -1,5 +1,6 @@
 # Load the data
 all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
+View(all_data)
 
 # Divide the 140 neighbourhoods into their corresponding 6 boroughs
 old_town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor", 
@@ -76,6 +77,17 @@ all_data$entire_home_apt <- as.numeric(all_data$room_type == "Entire home/apt")
 all_data$hotel_room <- as.numeric(all_data$room_type == "Hotel room")
 all_data$private_room <- as.numeric(all_data$room_type == "Private room")
 all_data$shared_room <- as.numeric(all_data$room_type == "Shared room")
+
+# Calculate mean date of "host_since" variable do determine dummy variable level 
+mean.Date(as.Date(all_data$host_since), na.rm =TRUE)
+
+# Make a dummy variable for variable "host_since"
+all_data$host_since_dummy <- ifelse(all_data$host_since > as.Date("2016-05-19", format = "%Y-%M-%d") &
+                      all_data$host_since < as.Date(max(as.Date(all_data$host_since), na.rm=TRUE), format = "%Y-%M-%d"), 1, 0)
+
+# Check table of "host_response_time" variable 
+table(all_data$host_response_time)
+
 
 # Write output
 write.csv(all_data, "../../gen/data-preparation/input/transformed_data.csv", row.names = FALSE)
