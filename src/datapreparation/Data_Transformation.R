@@ -1,6 +1,6 @@
 # Load the data
 all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
-View(all_data)
+
 
 # Divide the 140 neighbourhoods into their corresponding 6 boroughs
 old_town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor", 

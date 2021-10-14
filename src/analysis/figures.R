@@ -19,7 +19,7 @@ roomtype_price <- all_data %>%
   group_by(room_type, regulation) %>%
   summarise(price = mean(price))
 
-
+dir.create('../../gen/data-preparation/output/', recursive = T)
 pdf("../../gen/analysis/output/plot_prices.pdf")
 roomtype_price %>%
   ggplot(aes(x = room_type, y = price, fill = regulation)) +
@@ -30,5 +30,6 @@ roomtype_price %>%
   guides(fill = guide_legend(title = "Regulation")) +
   theme_minimal() + scale_fill_discrete(labels = c("Before Regulation", "After Regulation"))
 dev.off()
+
 
   
