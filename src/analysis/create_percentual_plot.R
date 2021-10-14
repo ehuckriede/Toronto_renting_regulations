@@ -8,24 +8,9 @@ library(recommenderlab)
 library(RColorBrewer)
 
 # --- Load Data --- #
-all_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
+roomtype_price_percentual_change <- read.csv(file = '../../gen/analysis/input/data_for_percentual_plot.csv')
 
-# --- Figure 1 --- #
-
-#make dummy variable a factor
-all_data$regulation <- as.factor(all_data$regulation)
-
-roomtype_price <- all_data %>%
-  group_by(room_type, regulation) %>%
-  summarise(price = mean(price))
-
-roomtype_price_percentual_change <- roomtype_price %>%
-  group_by(room_type) %>%
-  summarise(percentual_change = (last(price) - first(price))/first(price)) %>%
-  mutate(pos = percentual_change >= 0)
-
-
-pdf("../../gen/analysis/output/plot_prices_percentual.pdf")
+pdf("../../gen/analysis/output/percentual_prices_plot.pdf")
 roomtype_price_percentual_change %>%
   ggplot(aes(x=room_type, y = percentual_change, fill = pos)) +
   geom_bar(stat= "identity", position = "dodge2") +
@@ -36,4 +21,3 @@ roomtype_price_percentual_change %>%
   scale_y_continuous(labels = scales::percent_format(accuracy = 1), limits = c(-0.10, 0.25)) 
 
 dev.off()
-

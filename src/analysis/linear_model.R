@@ -1,5 +1,6 @@
 #load packages
 library(dplyr)
+library(haven)
 
 # Load the data
 cleaned_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
@@ -18,5 +19,6 @@ summary(cleaned_data)
 price_lm <- lm(price ~ regulation + old_town + etobicoke + north_york + east_york + york + entire_home_apt + hotel_room + private_room, cleaned_data)
 summary(price_lm)
 
+dir.create('../../gen/analysis/output/', recursive = T)
 sink("../../gen/analysis/output/linear_model_output.txt")
 print(summary(price_lm))
