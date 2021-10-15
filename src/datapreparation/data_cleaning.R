@@ -24,6 +24,14 @@ summary(all_data_cleaned)
 # Checking for missing values
 sum(is.na(all_data_cleaned))
 
+# Identifying the NAs starting at the last variable of the dataset
+sum(is.na(all_data_cleaned$identity_verified_dummy))
+sum(is.na(all_data_cleaned$superhost_dummy))
+sum(is.na(all_data_cleaned$host_since_dummy)) # here we find the 10 NAs
+
+# Filtering out the NAs 
+all_data_cleaned <- all_data_cleaned %>% filter(!is.na(host_since_dummy))
+
 # Write output
 dir.create('../../gen/data-preparation/output/', recursive = T)
 
