@@ -20,5 +20,8 @@ summary(cleaned_data)
 price_lm <- lm(price ~ regulation + old_town + etobicoke + north_york + east_york + york + entire_home_apt + hotel_room + private_room + host_since_dummy + superhost_dummy + identity_verified_dummy, cleaned_data)
 summary(price_lm)
 
+# Add an ANOVA analysis of the linear regression to check our LM regression
+anova(price_lm)
+
 dir.create('../../gen/analysis/output/', recursive = T)
 sink("../../gen/analysis/output/linear_model_output.txt")
