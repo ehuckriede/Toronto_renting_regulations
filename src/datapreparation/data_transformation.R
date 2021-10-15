@@ -5,21 +5,21 @@ all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 # Divide the 140 neighbourhoods into their corresponding 6 boroughs
 old_town <- c("The Beaches", "East End-Danforth", "Woodbine Corridor", 
               "Greenwood-Coxwell", "Danforth", "Playter Estates-Danforth", 
-                                         "North Riverdale", "Blake-Jones", "South Riverdale", 
-                                         "Cabbagetown-South St.James Town", "Regent Park", "Moss Park", 
-                                         "North St.James Town", "Church-Yonge Corridor", 
-                                         "Bay Street Corridor", "Waterfront Communities-The Island", 
-                                         "Kensington-Chinatown", "University", "Palmerston-Little Italy", 
+              "North Riverdale", "Blake-Jones", "South Riverdale",
+              "Cabbagetown-South St.James Town", "Regent Park", "Moss Park", 
+              "North St.James Town", "Church-Yonge Corridor", 
+              "Bay Street Corridor", "Waterfront Communities-The Island", 
+              "Kensington-Chinatown", "University", "Palmerston-Little Italy", 
               "Trinity-Bellwoods", "Niagara", "Dufferin Grove", 
               "Little Portugal", "South Parkdale", "Roncesvalles", 
               "High Park-Swansea", "High Park North", 
               "Runnymede-Bloor West Village", "Junction Area", 
               "Weston-Pellam Park", "Corso Italia-Davenport", 
-                                         "Dovercourt-Wallace Emerson-Junction", "Wychwood", "Annex",
-                                         "Casa Loma", "Yonge-St.Clair", "Rosedale-Moore Park", 
-                                         "Mount Pleasant East", "Yonge-Eglinton", "Forest Hill South", 
-                                         "Forest Hill North", "Lawrence Park South", "Mount Pleasant West", 
-                                         "Lawrence Park North")
+              "Dovercourt-Wallace Emerson-Junction", "Wychwood", "Annex",
+              "Casa Loma", "Yonge-St.Clair", "Rosedale-Moore Park", 
+              "Mount Pleasant East", "Yonge-Eglinton", "Forest Hill South", 
+              "Forest Hill North", "Lawrence Park South", "Mount Pleasant West", 
+              "Lawrence Park North")
 
 etobicoke <- c("West Humber-Clairville", "Mount Olive-Silverstone-Jamestown", 
                "Thistletown-Beaumond Heights", "Rexdale-Kipling", 
@@ -28,8 +28,8 @@ etobicoke <- c("West Humber-Clairville", "Mount Olive-Silverstone-Jamestown",
                "Edenbridge-Humber Valley", "Princess-Rosethorn", 
                "Eringate-Centennial-West Deane", "Markland Wood", 
                "Etobicoke West Mall", "Islington-City Centre West", 
-               "Kingsway South", "Stonegate-Queensway", "Mimico (includes Humber Bay Shores)", "New Toronto", 
-               "Long Branch", "Alderwood")
+               "Kingsway South", "Stonegate-Queensway", "Mimico (includes Humber Bay Shores)", 
+               "New Toronto", "Long Branch", "Alderwood")
 
 north_york <- c("Humber Summit", "Humbermede", "Pelmo Park-Humberlea", 
                 "Black Creek", "Glenfield-Jane Heights", "Downsview-Roding-CFB", 
@@ -57,11 +57,11 @@ york <- c("Humewood-Cedarvale", "Oakwood Village", "Briar Hill-Belgravia",
 scarborough <- c("Steeles", "L'Amoreaux", "Tam O'Shanter-Sullivan", 
                  "Wexford/Maryvale", "Clairlea-Birchmount", "Oakridge", 
                  "Birchcliffe-Cliffside", "Cliffcrest", "	Kennedy Park", 
-                 "Ionview", "Dorset Park", "Bendale", 
-                 "Agincourt South-Malvern West", "Agincourt North", "Milliken", 
-                 "Rouge", "Malvern", "Centennial Scarborough", "Highland Creek", 
-                 "Morningside", "West Hill", "Woburn", "Eglinton East", 
-                 "Scarborough Village", "Guildwood")
+                 "Ionview", "Dorset Park", "Bendale", "Agincourt South-Malvern West", 
+                 "Agincourt North", "Milliken", "Rouge", "Malvern", 
+                 "Centennial Scarborough", "Highland Creek", "Morningside",
+                 "West Hill", "Woburn", "Eglinton East", "Scarborough Village", 
+                 "Guildwood")
 
 
 # Make a dummy for every borough
