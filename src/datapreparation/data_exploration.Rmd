@@ -1,0 +1,114 @@
+---
+title: "Data exploration"
+author: "DPREP Team 16"
+date: "15/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## *Data retrieval*
+
+We retrieved our data from the following [website](http://insideairbnb.com/get-the-data.html). The goal of our research is to figure out whether the implemented renting market regulations have an effect on the rental prices on AirBnB in Toronto. In case this has a negative effect, then this regulation could also be suggested for other cities facing similar problems as Toronto did.
+
+The website provides data files with a lot of information on AirBnB in Toronto per month for the time period of a year. In order to inspect the effect of the regulation, we retrieved two data files:
+  1. Information on listings in Toronto of August 2020
+  2. Information on listings in Toronto of August 2021
+
+## Data merging
+
+We want to compare the information on listings prior to the regulations and after the regulations. Therefore, it is important to merge to two data files that we retrieved before we do any data preparation. The variable "regulation" is created as a dummy variable for this first. After that, we can merge the two data sets into a data set that we can use to further prepare the data for analysis.
+
+## Data exploration
+
+In order to understand the research, it is important to be well informed about the variables in the data. The data consists out of 75 variables which give different information on the AirBnB listings in Toronto. Multiple variables are used in our analysis. There is more information given about the variables used in our research below. Most information is retrieved from the Inside AirBnB Data dictionary which is given on the previously named website.
+
+### Variables used for main research
+
+#### Regulation
+
+The created dummy variable "Regulation" indicates whether the information about the listing comes from prior to the regulation or after the regulation. The value 0 indicates the moment prior to the regulation (August, 2020), while the value 1 indicates the moment after the regulation (August, 2021).
+
+#### Price
+
+The variable "price" reflects the daily price in local currency.
+
+### Control variables
+
+In order to ensure that the effect of the regulation on price is the only indicator in potential changes in price, we used several covariates in our research.
+
+#### room_type
+
+All homes are grouped into the following four room types:
+  1. entire home/apt
+  2. hotel room
+  3. shared room
+  4. private room
+
+```{r, echo= FALSE, results='hide', message= FALSE, warning=FALSE}
+# Load Libraries
+library(googledrive)
+library(readr)
+
+dir.create('../../data')
+
+#listings august 2020
+data_id <- "1f3L-KHmC89xcn7LIMpGsfwh8zMu8orPE"
+out_file <- "../../data/listings0820.csv"
+
+drive_download(
+    as_id(data_id), 
+    path = out_file, 
+    overwrite = TRUE)
+
+#listings august 2021
+data_id2 <- "11Xy7UtyZaYsOfU4xIDeLA_syv1WFeDV4"
+out_file2 <- "../../data/listings0821.csv"
+
+drive_download(
+    as_id(data_id2), 
+    path = out_file2, 
+    overwrite = TRUE)
+
+# Load Data
+listings0820 <- read.csv("../../data/listings0820.csv")
+listings0821 <- read.csv("../../data/listings0821.csv")
+
+#Create dummy variable 'regulation' in both datasets. 
+# Dummy variable = 0 for dataset before regulation
+# Dummy variable = 1 for dataset after regulation
+
+listings0820$regulation <- 0
+listings0821$regulation <- 1
+
+#Merge datasets together to be able to perform analysis
+listings_merged <- merge(listings0820, listings0821, all.x=TRUE, all.y=TRUE)
+
+# Write output
+dir.create('../../gen')
+dir.create('../../gen/data-preparation')
+dir.create('../../gen/data-preparation/input')
+write.csv(listings_merged, "../../gen/data-preparation/input/merged_data.csv", row.names = FALSE)
+
+# Load the data
+all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
+
+# Create barplot
+counts <- table(all_data$room_type)
+barplot(counts, main="room type",
+        border="#69b3a2", col="white")
+```
+
+#### neighbourhood_cleansed
+
+The neighbourhood as geocoded using the latitude and longitude against neighborhoods as defined by open or public digital shape files.
+
+#### host_since
+
+Make a line plot
+
+#### host_is_superhost
+
+#### host_identity_verified
