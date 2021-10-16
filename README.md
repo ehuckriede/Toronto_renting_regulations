@@ -41,7 +41,7 @@ The following results conclude our research: the prices go up after the regulati
 **Plotted difference in mean price before and after regulation**
 
 <p align="center">     
-<a img width="400" height="600" href="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w582-h315-p-k" /> </a>
+<a img width="400" height="800" href="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w582-h315-p-k" /> </a>
 </p>
 
 **Coefficient results of the linear regression**
