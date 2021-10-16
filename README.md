@@ -32,22 +32,16 @@ As the regulations can these three different scenario's it is important that the
 
 To analyze the data, first a linear regression is used to examine the relationship between the dependent variable 'price' and the independent variable 'regulation'. Linear regression also allows for easy control of covariates by simply adding them in the regression. In this research, covariates about the neighborhood, the room type, the time that someone is a host, the fact whether someone is a superhost and the fact whether a host's identity is verified are included. The results of this linear regression provide informative insights about the magnitude and the direction of the effect of the independent variable on the dependent variable, as well as all covariates. Another reason why linear regression is preferred in this particular case, instead of for example ANOVA, is that it provides p-values for each mean and thus indicates which variable is different from the reference immediateley.
 
-With use of this linear regression, it is therefore easy to see which effect the regulation has on the price of AirBnB's and whether other factors such as the neighboorhood and room type. 
+With use of this linear regression, it is therefore easy to see which effect the regulation has on the price of AirBnB's and whether other factors such as the neighboorhood and room type also have a significance influence on this price. 
 
 **Results**
-The following results conclude our research: the prices go up after the regulation has been implemented: 11,5% price increase. 
 
-**Barplot** 
+The following results conclude our research: the prices go up after the regulation has been implemented: 11,5% price increase. This is visually represented in the bar plot below.
+
+**Plotted difference in mean price before and after regulation**
      
-**Full plot**
-<p align="center">
-<a href="https://lh3.googleusercontent.com/vz2jLhnbzZ8QvynDJjq7iBIcjLOQRUTtznLNj3Te-FpcYboh2YMyDbTVNMap-R64PkCbHmMbxgEXqcyb30x_kD9scDbX-ORwgUAw0tbOl4QUSjmjVBgdn9TWWeohksF2zdBp87s=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/vz2jLhnbzZ8QvynDJjq7iBIcjLOQRUTtznLNj3Te-FpcYboh2YMyDbTVNMap-R64PkCbHmMbxgEXqcyb30x_kD9scDbX-ORwgUAw0tbOl4QUSjmjVBgdn9TWWeohksF2zdBp87s=w600-h315-p-k" /> </a>
-</p>
+<a href="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w582-h315-p-k" /> </a>
 
-**Percentage plot**
-<p align="center">
-<a href="https://lh3.googleusercontent.com/TEF3GjzR04W27QI64g19pxcC54LLcDn1FunWO2tkR_-CSuV-ctOub4jm3AVe0wD70x6QGaNJUZso6cxLdS-cp1nSMCuRXKL-6xl_wNbKvmSPq4rTfNTduSRTqj2LlUMp_J1EZYA=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/TEF3GjzR04W27QI64g19pxcC54LLcDn1FunWO2tkR_-CSuV-ctOub4jm3AVe0wD70x6QGaNJUZso6cxLdS-cp1nSMCuRXKL-6xl_wNbKvmSPq4rTfNTduSRTqj2LlUMp_J1EZYA=w494-h315-p-k" /> </a>
-</p>
 
 Second, summarize your results concisely. Make use of subheaders where appropriate.
 
