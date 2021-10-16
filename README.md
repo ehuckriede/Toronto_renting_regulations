@@ -37,7 +37,7 @@ With use of this linear regression, it is therefore easy to see which effect the
 The following results 
 
 <p align="center">
-  <img width="600" height="400" src="C:\Users\julie\OneDrive\Documents\Marketing Analytics\DPrep\Group project\percentual_plot.png">
+<a href="https://lh3.googleusercontent.com/TEF3GjzR04W27QI64g19pxcC54LLcDn1FunWO2tkR_-CSuV-ctOub4jm3AVe0wD70x6QGaNJUZso6cxLdS-cp1nSMCuRXKL-6xl_wNbKvmSPq4rTfNTduSRTqj2LlUMp_J1EZYA=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/TEF3GjzR04W27QI64g19pxcC54LLcDn1FunWO2tkR_-CSuV-ctOub4jm3AVe0wD70x6QGaNJUZso6cxLdS-cp1nSMCuRXKL-6xl_wNbKvmSPq4rTfNTduSRTqj2LlUMp_J1EZYA=w494-h315-p-k" /> </a>
 </p>
 
 Second, summarize your results concisely. Make use of subheaders where appropriate.
