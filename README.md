@@ -38,7 +38,7 @@ With use of this linear regression, it is therefore easy to see which effect the
 
 The following results conclude our research: the prices go up after the regulation has been implemented: 11,5% price increase. This is visually represented in the bar plot below.
 
-**Plotted difference in mean price before and after regulation**
+*Plotted difference in mean price before and after regulation*
 
 <p align="center">     
 <a href="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w582-h315-p-k" /> </a>
