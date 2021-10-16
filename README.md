@@ -67,10 +67,16 @@ This repository contains the following files/folders:
 During this project, multiple subdirectories were used. Within the subdirectory 'src', the code is stored within R scripts. These scripts can be run automatically by running the makefile within the repository. [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) will run the scripts in the following order:
 
 1. src/datapreparation/get_data.R
-2. src/datapreparation/Data_Merging.R
-3. src/datapreparation/Data_Transformation.R
-4. src/datapreparation/Data_Cleaning.R
-5. ...
+2. src/datapreparation/data_merging.R
+3. src/datapreparation/data_transformation.R
+4. src/datapreparation/data_cleaning.R
+5. src/analysis/linear_model.R
+6. src/analysis/get_data_for_full_plot.R
+7. src/analysis/get_data_for_percentual_plot.R
+8. src/analysis/get_data_for_barplot.R
+9. src/analysis/create_full_plot.R
+10. src/analysis/create_percentual_plot.R
+11. src/analysis/create_prices_barplot.R
 
 ## More resources
 
