@@ -42,8 +42,11 @@ The following results conclude our research: the prices go up after the regulati
      
 <a href="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/b4JhyzVsucv7RZRXzTxAKp5NJyrUiwI-F3HcSuZYwaLqLvrgbpOaSJ8eAtFb376aavhNoouJ4-lVi1D2v_N65n89tNXHDbCzCc0g28vsSEiT3x1jv6yIZqpSXvTRaMbw1exWBiE=w582-h315-p-k" /> </a>
 
+**Coefficient results of the linear regression**
 
-Second, summarize your results concisely. Make use of subheaders where appropriate.
+The results of this linear regression are summarized below. As you can see, price has a significance influence on the price. However, so do many of our covariates. Only the neighborhoods in East York and York, the room types 'hotel room' and 'private room' and the fact whether the identity of the host is verified or not are not significant. 
+The R-squared value is not particularly high, which means a lot of the variation in the price still has not been accounted for. Nevertheless, the regulation has had an impact on the AirBnB prices and that is for this research the most important goal and conclusion.  
+<a href="https://lh3.googleusercontent.com/H8ikHLyxZuuUHG2NV43l4G6BcuGfJzbRWm9r-1H-xmJa6pW6O70agqL-BZClz02fc91cB5i71zpw7kt5HfC5fR2SUcD8AfpEOZ5ewfssiBnLGpLneI3thUa93nRljrpYaU7eiVc=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/H8ikHLyxZuuUHG2NV43l4G6BcuGfJzbRWm9r-1H-xmJa6pW6O70agqL-BZClz02fc91cB5i71zpw7kt5HfC5fR2SUcD8AfpEOZ5ewfssiBnLGpLneI3thUa93nRljrpYaU7eiVc=w600-h315-p-k" /> </a>
 
 ## Repository overview
 
