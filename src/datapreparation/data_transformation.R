@@ -87,6 +87,7 @@ all_data$host_since_dummy <- ifelse(all_data$host_since > as.Date("2016-05-19", 
 
 # Check table of "host_response_time" variable 
 table(all_data$host_response_time)
+# host_response_time not a good covariate, as this variable contains too many NAs
 
 # Make a dummy for variable "host_is_superhost"
 all_data$superhost_dummy <- as.numeric(all_data$host_is_superhost == "t")
