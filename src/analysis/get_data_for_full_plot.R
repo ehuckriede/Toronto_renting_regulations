@@ -13,5 +13,3 @@ roomtype_price <- all_data %>%
 
 dir.create('../../gen/analysis/input/', recursive = T)
 write.csv(roomtype_price, "../../gen/analysis/input/data_for_full_plot.csv", row.names = FALSE)
-
-  
