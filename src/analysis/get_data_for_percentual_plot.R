@@ -13,6 +13,3 @@ roomtype_price_percentual_change <- roomtype_price %>%
   mutate(pos = percentual_change >= 0)
 
 write.csv(roomtype_price_percentual_change, "../../gen/analysis/input/data_for_percentual_plot.csv", row.names = FALSE)
-
-
-
