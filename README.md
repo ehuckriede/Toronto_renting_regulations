@@ -35,8 +35,10 @@ To analyze the data, first a linear regression is used to examine the relationsh
 With use of this linear regression, it is therefore easy to see which effect the regulation has on the price of AirBnB's and whether other factors such as the neighboorhood and room type. 
 
 **Results**
-The following results conclude our research: the prices go up after the regulation has been implemented. 
+The following results conclude our research: the prices go up after the regulation has been implemented: 11,5% price increase. 
 
+**Barplot** 
+     
 **Full plot**
 <p align="center">
 <a href="https://lh3.googleusercontent.com/vz2jLhnbzZ8QvynDJjq7iBIcjLOQRUTtznLNj3Te-FpcYboh2YMyDbTVNMap-R64PkCbHmMbxgEXqcyb30x_kD9scDbX-ORwgUAw0tbOl4QUSjmjVBgdn9TWWeohksF2zdBp87s=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/vz2jLhnbzZ8QvynDJjq7iBIcjLOQRUTtznLNj3Te-FpcYboh2YMyDbTVNMap-R64PkCbHmMbxgEXqcyb30x_kD9scDbX-ORwgUAw0tbOl4QUSjmjVBgdn9TWWeohksF2zdBp87s=w600-h315-p-k" /> </a>
