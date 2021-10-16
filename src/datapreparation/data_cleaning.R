@@ -17,8 +17,8 @@ all_data$price <- (gsub("\\$", "", all_data$price))
 all_data$price <- as.numeric(all_data$price)
 sum(is.na(all_data$price))
 
-# Removing columns
-all_data_cleaned <- all_data[ -c(1:39, 41:74) ]
+# Removing unnecessary columns (keeping room_type, as it is needed for the plots)
+all_data_cleaned <- all_data[ -c(1:32, 34:39, 41:74) ]
 summary(all_data_cleaned)
 
 # Checking for missing values
