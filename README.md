@@ -47,12 +47,17 @@ The following results conclude our research: the prices go up after the regulati
 **Coefficient results of the linear regression**
 
 The results of this linear regression are summarized below. As you can see, price has a significance influence on the price. However, so do many of our covariates. Only the neighborhoods in East York and York, the room types 'hotel room' and 'private room' and the fact whether the identity of the host is verified or not are not significant. 
-The R-squared value is not particularly high, which means a lot of the variation in the price still has not been accounted for. Nevertheless, the regulation has had an impact on the AirBnB prices and that is for this research the most important goal and conclusion.  
-
-
 
 <p align="center"> 
-<a img width="400" height="1000" href="https://lh3.googleusercontent.com/H8ikHLyxZuuUHG2NV43l4G6BcuGfJzbRWm9r-1H-xmJa6pW6O70agqL-BZClz02fc91cB5i71zpw7kt5HfC5fR2SUcD8AfpEOZ5ewfssiBnLGpLneI3thUa93nRljrpYaU7eiVc=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/H8ikHLyxZuuUHG2NV43l4G6BcuGfJzbRWm9r-1H-xmJa6pW6O70agqL-BZClz02fc91cB5i71zpw7kt5HfC5fR2SUcD8AfpEOZ5ewfssiBnLGpLneI3thUa93nRljrpYaU7eiVc=w600-h315-p-k" /> </a>
+<a href="https://lh3.googleusercontent.com/u-0UXZTcrejtut4ZaXtVdbKEBT1aW7GsDOTfW72KcJDsoC6m0jh8EZxF83C9Sv77aM0ciE6ouwdt5rAWr1q6JxXXc4hI5Xk193KAL8hX1k5_VYbyuD-TPwyrGhVlsKuQuPyRGjg=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/u-0UXZTcrejtut4ZaXtVdbKEBT1aW7GsDOTfW72KcJDsoC6m0jh8EZxF83C9Sv77aM0ciE6ouwdt5rAWr1q6JxXXc4hI5Xk193KAL8hX1k5_VYbyuD-TPwyrGhVlsKuQuPyRGjg=w600-h315-p-k" /> </a>
+</p>
+
+**R-squared**
+
+The R-squared value is also included in this linear regression. This value is not particularly high, which means a lot of the variation in the price still has not been accounted for. Nevertheless, the regulation has had an impact on the AirBnB prices and that is for this research the most important goal and conclusion. An nice entry for further research could be to see whether COVID-19 related factors have a much larger effect on the price!
+
+<p align="center"> 
+<a href="https://lh3.googleusercontent.com/xVU6MJCreFuUXZ7LxEf1UneWLjcTiTkp5DiTsqIKDraeilaDasej_APXDetCAFhr3J1Z3zC7ZNJDsUUxa4kmkTcpmDWBZ_XZWy5MK5txFHPriAMN2w4PNVCFkmNuSBzCSQ3EhDM=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/xVU6MJCreFuUXZ7LxEf1UneWLjcTiTkp5DiTsqIKDraeilaDasej_APXDetCAFhr3J1Z3zC7ZNJDsUUxa4kmkTcpmDWBZ_XZWy5MK5txFHPriAMN2w4PNVCFkmNuSBzCSQ3EhDM=w600-h73-p-k" /> </a>
 </p>
 
 ## Repository overview
