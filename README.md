@@ -31,9 +31,12 @@ As the regulations can these three different scenario's it is important that the
 ## Method and results
 
 To analyze the data, first a linear regression is used to examine the relationship between the dependent variable 'price' and the independent variable 'regulation'. Linear regression also allows for easy control of covariates by simply adding them in the regression. In this research, covariates about the neighborhood, the room type, the time that someone is a host, the fact whether someone is a superhost and the fact whether a host's identity is verified are included. The results of this linear regression provide informative insights about the magnitude and the direction of the effect of the independent variable on the dependent variable, as well as all covariates. Another reason why linear regression is preferred in this particular case, instead of for example ANOVA, is that it provides p-values for each mean and thus indicates which variable is different from the reference immediateley.
-With use of this linear regression, it is therefore easy to see which effect the regulation has on the price of AirBnB's and whether other factors such as the neighboorhood and room type. 
-First, introduce and motivate your chosen method, and explain how it contributes to solving the research question/business problem.
 
+With use of this linear regression, it is therefore easy to see which effect the regulation has on the price of AirBnB's and whether other factors such as the neighboorhood and room type. 
+
+The following results 
+
+xfun::embed_file("full_prices_plot.pdf")
 Second, summarize your results concisely. Make use of subheaders where appropriate.
 
 ## Repository overview
