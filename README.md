@@ -57,7 +57,7 @@ The results of this linear regression are summarized below. As you can see, pric
 The R-squared value is also included in this linear regression. This value is not particularly high, which means a lot of the variation in the price still has not been accounted for. Nevertheless, the regulation has had an impact on the AirBnB prices and that is for this research the most important goal and conclusion. An nice entry for further research could be to see whether COVID-19 related factors have a much larger effect on the price!
 
 <p align="center"> 
-<a href="https://lh3.googleusercontent.com/xVU6MJCreFuUXZ7LxEf1UneWLjcTiTkp5DiTsqIKDraeilaDasej_APXDetCAFhr3J1Z3zC7ZNJDsUUxa4kmkTcpmDWBZ_XZWy5MK5txFHPriAMN2w4PNVCFkmNuSBzCSQ3EhDM=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/xVU6MJCreFuUXZ7LxEf1UneWLjcTiTkp5DiTsqIKDraeilaDasej_APXDetCAFhr3J1Z3zC7ZNJDsUUxa4kmkTcpmDWBZ_XZWy5MK5txFHPriAMN2w4PNVCFkmNuSBzCSQ3EhDM=w600-h73-p-k" /> </a>
+<a href="https://lh3.googleusercontent.com/ob-Zlq2XtiFzglbfSeyYGfLx-zOAYEoqy6ruA2TX0vVadQk8SD3X1tkExBIjpCceY4SDzxOvrHsRJhHIAHInkuoYCxiteFUFp-lrGV5jM6Rc2lxrmhv4yXsaAwsa_BpAMwgYb5c=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/ob-Zlq2XtiFzglbfSeyYGfLx-zOAYEoqy6ruA2TX0vVadQk8SD3X1tkExBIjpCceY4SDzxOvrHsRJhHIAHInkuoYCxiteFUFp-lrGV5jM6Rc2lxrmhv4yXsaAwsa_BpAMwgYb5c=w600-h205-p-k" /> </a>
 </p>
 
 ## Repository overview
