@@ -35,8 +35,10 @@ To analyze the data, first a linear regression is used to examine the relationsh
 With use of this linear regression, it is therefore easy to see which effect the regulation has on the price of AirBnB's and whether other factors such as the neighboorhood and room type. 
 
 **Results**
-The following results conclude our research: the prices go up after the regulation has been implemented. 
+The following results conclude our research: the prices go up after the regulation has been implemented: 11,5% price increase. 
 
+**Barplot** 
+     
 **Full plot**
 <p align="center">
 <a href="https://lh3.googleusercontent.com/vz2jLhnbzZ8QvynDJjq7iBIcjLOQRUTtznLNj3Te-FpcYboh2YMyDbTVNMap-R64PkCbHmMbxgEXqcyb30x_kD9scDbX-ORwgUAw0tbOl4QUSjmjVBgdn9TWWeohksF2zdBp87s=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/vz2jLhnbzZ8QvynDJjq7iBIcjLOQRUTtznLNj3Te-FpcYboh2YMyDbTVNMap-R64PkCbHmMbxgEXqcyb30x_kD9scDbX-ORwgUAw0tbOl4QUSjmjVBgdn9TWWeohksF2zdBp87s=w600-h315-p-k" /> </a>
@@ -67,10 +69,16 @@ This repository contains the following files/folders:
 During this project, multiple subdirectories were used. Within the subdirectory 'src', the code is stored within R scripts. These scripts can be run automatically by running the makefile within the repository. [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) will run the scripts in the following order:
 
 1. src/datapreparation/get_data.R
-2. src/datapreparation/Data_Merging.R
-3. src/datapreparation/Data_Transformation.R
-4. src/datapreparation/Data_Cleaning.R
-5. ...
+2. src/datapreparation/data_merging.R
+3. src/datapreparation/data_transformation.R
+4. src/datapreparation/data_cleaning.R
+5. src/analysis/linear_model.R
+6. src/analysis/get_data_for_full_plot.R
+7. src/analysis/get_data_for_percentual_plot.R
+8. src/analysis/get_data_for_barplot.R
+9. src/analysis/create_full_plot.R
+10. src/analysis/create_percentual_plot.R
+11. src/analysis/create_prices_barplot.R
 
 ## More resources
 
