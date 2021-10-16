@@ -36,7 +36,10 @@ With use of this linear regression, it is therefore easy to see which effect the
 
 The following results 
 
-xfun::embed_file("full_prices_plot.pdf")
+<p align="center">
+  <img width="600" height="400" src="https://onedrive.live.com/?cid=A418BF3AF184CB0D&id=A418BF3AF184CB0D%2134583&parId=A418BF3AF184CB0D%2127739&o=OneUp">
+</p>
+
 Second, summarize your results concisely. Make use of subheaders where appropriate.
 
 ## Repository overview
