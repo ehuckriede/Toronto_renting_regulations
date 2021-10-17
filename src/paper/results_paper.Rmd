@@ -142,3 +142,24 @@ You can see that the prices in the Old Town of Toronto are affected most by the 
 
 ### **Barplot room types**
 Last, a barplot for the room types also has been created. 
+```{r, echo=FALSE}
+# --- Load Data --- #
+roomtype_price <- read.csv(file = '../../gen/analysis/input/data_for_roomtype_plot.csv')
+
+#create plot
+roomtype_price$regulation <- as.factor(roomtype_price$regulation)
+
+roomtype_price %>%
+  ggplot(aes(x = room_type, y = price, fill = regulation)) +
+  geom_bar(stat = "identity", position = "dodge2") +
+  xlab("Room Type") +
+  ylab("Price per Night") +
+  ggtitle("Price per Room Type", subtitle = "Before and After Regulation") +
+  guides(fill = guide_legend(title = "Regulation")) +
+  theme_minimal() + scale_fill_discrete(labels = c("Before Regulation", "After Regulation"))
+
+```
+The barplot shows that for every room type, except hotel room, prices increase after the regulation. That does make sense, because the regulation mainly effects the entire homes or appartments, or the private/shared rooms within someones house.
+
+## **Overall conclusion**
+By means of this linear regression and the barplots, it can be 
