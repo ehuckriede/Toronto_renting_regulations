@@ -29,7 +29,7 @@ summary(price_lm)
 ```
 Here, it is directly noticeable that regulation has a significant, positive influence on the price. All covariates, except for the identity_verified_dummy, also have a significant influence on the listing price. From this, it can be concluded that not only regulation has had a significant impact on the price, but these covariates as well. However, these effects can also go hand in hand; when the regulation was made official, the offer for several room types such as entire homes or apartments would significantly decrease, as way less people could offer such accommodation. The scarcity for this room type can also lead to an increase in price. 
 
-*Note that for example, not all neighborhoods and room_type have a significant influence on the price. However, to draw the conclusion that being in a specific neighborhood and having a specific room type to offer has a significant impact on the price, having one significant dummy is already enough, as this shows that at least one neighborhood or roomtype is significant for the price.* 
+*Note that for example, not all neighborhoods and room_type have a significant influence on the price. However, to draw the conclusion that being in a specific neighborhood and having a specific room type to offer has a significant impact on the price, having one significant dummy is already enough, as this shows that at least one neighborhood or room type is significant for the price.* 
 
 ## **Data visualization**
 ### **Data retrieval plots**
@@ -120,7 +120,7 @@ regulation_price %>%
   scale_fill_discrete(labels = c("Before Regulation", "After Regulation")) + geom_col()
 ```
 ### **Barplot neighborhoods**
-The results of the barplot of the neighborhoods ook like this:
+The results of the barplot of the neighborhoodsl ook like this:
 ```{r, echo=FALSE}
 # --- Load Data --- #
 neighborhoods_price <- read.csv(file = '../../gen/analysis/input/data_for_plot_neighborhoods.csv')
@@ -159,7 +159,7 @@ roomtype_price %>%
   theme_minimal() + scale_fill_discrete(labels = c("Before Regulation", "After Regulation"))
 
 ```
-The barplot shows that for every room type, except hotel room, prices increase after the regulation. That does make sense, because the regulation mainly effects the entire homes or appartments, or the private/shared rooms within someones house.
+The barplot shows that for every room type, except hotel room, prices increase after the regulation. That does make sense, because the regulation mainly effects the entire homes or apartments, or the private/shared rooms within someones house.
 
 ## **Overall conclusion**
-By means of this linear regression and the barplots, it can be concluded that the regulation definitely has had its effect on the listing price of AirBnB's. The regulation was not the only significant influence for the price increase, however, the effects of the regulation and the other significant impacts on the increase in price can be related to each other, as explained earier. Therefore, it can be concluded that this regulation definitely played a role in the increase in the prices. However, the linear regression model only explains 2.7% of the total variance. Other researchers can build further on this report to find out what caused the other variance in price. The influence of COVID-19 can be a very interesting angle to look at this data. 
+By means of this linear regression and the barplots, it can be concluded that the regulation definitely has had its effect on the listing price of AirBnB's. The regulation was not the only significant influence for the price increase, however, the effects of the regulation and the other significant impacts on the increase in price can be related to each other, as explained earlier. Therefore, it can be concluded that this regulation definitely played a role in the increase in the prices. However, the linear regression model only explains 2.7% of the total variance. Other researchers can build further on this report to find out what caused the other variance in price. The influence of COVID-19 can be a very interesting angle to look at this data. 
