@@ -46,7 +46,9 @@ The following results conclude our research: the prices go up after the regulati
 
 **Coefficient results of the linear regression**
 
-The results of this linear regression are summarized below. As you can see, price has a significance influence on the price. However, so do many of our covariates. Only the neighborhoods in East York and York, the room types 'hotel room' and 'private room' and the fact whether the identity of the host is verified or not are not significant. 
+The results of this linear regression are summarized below. As you can see, it is directly noticeable that regulation has a significant, positive influence on the price. All covariates, except for the identity_verified_dummy, also have a significant influence on the listing price. From this, it can be concluded that not only regulation has had a significant impact on the price, but these covariates as well. However, these effects can also go hand in hand; when the regulation was made official, the offer for several room types such as entire homes or apartments would significantly decrease, as way less people could offer such accommodation. The scarcity for this room type can also lead to an increase in price. 
+
+*Note that for example, not all neighborhoods and room_type have a significant influence on the price. However, to draw the conclusion that being in a specific neighborhood and having a specific room type to offer has a significant impact on the price, having one significant dummy is already enough, as this shows that at least one neighborhood or roomtype is significant for the price.* 
 
 <p align="center"> 
 <a href="https://lh3.googleusercontent.com/u-0UXZTcrejtut4ZaXtVdbKEBT1aW7GsDOTfW72KcJDsoC6m0jh8EZxF83C9Sv77aM0ciE6ouwdt5rAWr1q6JxXXc4hI5Xk193KAL8hX1k5_VYbyuD-TPwyrGhVlsKuQuPyRGjg=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/u-0UXZTcrejtut4ZaXtVdbKEBT1aW7GsDOTfW72KcJDsoC6m0jh8EZxF83C9Sv77aM0ciE6ouwdt5rAWr1q6JxXXc4hI5Xk193KAL8hX1k5_VYbyuD-TPwyrGhVlsKuQuPyRGjg=w600-h315-p-k" /> </a>
