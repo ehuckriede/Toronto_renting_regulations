@@ -64,7 +64,7 @@ The R-squared value is also included in this linear regression. This value is no
 
 This repository contains the following files/folders:
 
-- "src" folder: This folder includes all the code that is needed to download, transform and analyze the data of [Inside AirBnb](http://insideairbnb.com/toronto). Within the "src" folder you will find subfolders seperating between data preparation, analyzing and paper. In these subfolders you will find all the code to run the corresponding folder as well as a makefile per step. This makefile will run all code included in the specific folder instead of you manually loading every script, which will save a lot of time.   
+- "src" folder: This folder includes all the code that is needed to download, transform and analyze the data of [Inside AirBnb](http://insideairbnb.com/toronto). Within the "src" folder you will find subfolders seperating between data preparation, data exploration, analyzing and paper. In the subfolders datapreparation and analysis you will find all the code to run the corresponding folder, including a makefile per subfolder which make it possible to run all the code included in the specific folder in he right order instead of you manually loading every script. This will save a lot of time.  
 
 - Gitignore: This file specifies files that should be ignored/untracked.
 
@@ -82,10 +82,17 @@ During this project, multiple subdirectories were used. Within the subdirectory 
 3. src/datapreparation/data_transformation.R
 4. src/datapreparation/data_cleaning.R
 5. src/analysis/linear_model.R
-6. src/analysis/get_data_for_full_plot.R
-7. src/analysis/get_data_for_barplot.R
-8. src/analysis/create_full_plot.R
-9. src/analysis/create_prices_barplot.R
+6. src/analysis/get_data_for_neighborhood_plot.R
+7. src/analysis/get_data_for_roomtype_plot.R
+8. src/analysis/get_data_for_barplot.R
+9. src/analysis/create_neighborhood_plot.R
+10. src/analysis/create_roomtype_plot.R
+11. src/analysis/create_prices_barplot.R
+
+This makefile thus runs the code in the "src/datapreparation" and "src/analysis" folder. Running this code will obtain two new folders within the repository: "data/" and "gen/". The raw data obtained by the "get_data.R" code will be stored within the "data/" folder. Temporary folders within the datapreparation will be put in gen/datapreparation/input. The final output file of the datapreparation code, which is a merged, transformed and cleaned dataset, is consequently stored in gen/datapreparation/output. 
+Then, the get_data files within the "src/analysis" folder will obtain smaller datasets which will later on be used to obtain the final output graphs. These datasets will be stored in "gen/analysis/input", whereas the final output graphs will be stored in "gen/analysis/output".
+
+The two other subfolders, src/data_exploration and src/paper contain a Rmd file which should be run manually to obtain the output data of these files.  
 
 ## More resources
 
