@@ -2,7 +2,7 @@
 title: "results_paper"
 author: "DPREP Team 16"
 date: "17/10/2021"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -80,7 +80,7 @@ neighborhoods_price_long <- neighborhoods_long %>%
   group_by(neighborhood, regulation) %>%
   summarise(price = mean(price))
 
-write.csv(neighborhoods_price, "../../gen/analysis/input/data_for_plot_neighborhoods.csv", row.names = FALSE)
+write.csv(neighborhoods_price_long, "../../gen/analysis/input/data_for_plot_neighborhoods.csv", row.names = FALSE)
 ```
 #### **Room type plot**
 Last, we also include a plot that visualizes the difference in prices before and after the regulation for the room types. The retrieval of the data has been done in a similar way. 
@@ -120,7 +120,7 @@ regulation_price %>%
   scale_fill_discrete(labels = c("Before Regulation", "After Regulation")) + geom_col()
 ```
 ### **Barplot neighborhoods**
-The results of the barplot of the neighborhoodsl ook like this:
+The results of the barplot of the neighborhoodslook like this:
 ```{r, echo=FALSE}
 # --- Load Data --- #
 neighborhoods_price <- read.csv(file = '../../gen/analysis/input/data_for_plot_neighborhoods.csv')
