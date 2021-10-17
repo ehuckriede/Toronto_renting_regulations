@@ -8,7 +8,7 @@ library(recommenderlab)
 library(RColorBrewer)
 
 # --- Load Data --- #
-neighborhoods_price <- read.csv(file = '../../gen/analysis/input/data_for_plot_neighborhoods.csv')
+neighborhoods_price_long <- read.csv(file = '../../gen/analysis/input/data_for_plot_neighborhoods.csv')
 
 #create plot
 neighborhoods_price_long$regulation <- as.factor(neighborhoods_price_long$regulation)

@@ -11,5 +11,4 @@ roomtype_price <- all_data %>%
   group_by(room_type, regulation) %>%
   summarise(price = mean(price))
 
-dir.create('../../gen/analysis/input/', recursive = T)
 write.csv(roomtype_price, "../../gen/analysis/input/data_for_roomtype_plot.csv", row.names = FALSE)

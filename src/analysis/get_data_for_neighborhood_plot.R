@@ -27,5 +27,6 @@ neighborhoods_price_long <- neighborhoods_long %>%
   group_by(neighborhood, regulation) %>%
   summarise(price = mean(price))
 
-write.csv(neighborhoods_price, "../../gen/analysis/input/data_for_plot_neighborhoods.csv", row.names = FALSE)
+dir.create('../../gen/analysis/input/', recursive = T)
+write.csv(neighborhoods_price_long, "../../gen/analysis/input/data_for_plot_neighborhoods.csv", row.names = FALSE)
 
