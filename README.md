@@ -58,6 +58,8 @@ The results of this linear regression are summarized below. As you can see, it i
 
 The R-squared value is also included in this linear regression. This value is not particularly high, namely 0.027. This means that 2.7% of the variance in the price is explained by this model, so a lot of the variation in the price still has not been accounted for. Nevertheless, the regulation has had an impact on the AirBnB prices and that is for this research the most important goal and conclusion. An nice entry for further research could be to see whether COVID-19 related factors have a much larger effect on the price!
 
+<u><b>For more in-depth insights regarding the effect of the Toronto renting regulations on price, check out the "paper" folder located in our "gen" folder! (after running with "make")</b></u>
+
 ## Repository overview
 
 This repository contains the following files/folders:
@@ -81,11 +83,9 @@ During this project, multiple subdirectories were used. Within the subdirectory 
 4. src/datapreparation/data_cleaning.R
 5. src/analysis/linear_model.R
 6. src/analysis/get_data_for_full_plot.R
-7. src/analysis/get_data_for_percentual_plot.R
-8. src/analysis/get_data_for_barplot.R
-9. src/analysis/create_full_plot.R
-10. src/analysis/create_percentual_plot.R
-11. src/analysis/create_prices_barplot.R
+7. src/analysis/get_data_for_barplot.R
+8. src/analysis/create_full_plot.R
+9. src/analysis/create_prices_barplot.R
 
 ## More resources
 
