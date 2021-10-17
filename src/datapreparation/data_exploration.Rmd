@@ -1,7 +1,5 @@
 ---
-title: "Data exploration"
-author: "DPREP Team 16"
-date: "15/10/2021"
+title: "Data exploration Toronto renting regulations"
 output: html_document
 ---
 
@@ -98,17 +96,75 @@ all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 # Create barplot
 counts <- table(all_data$room_type)
 barplot(counts, main="room type",
-        border="#69b3a2", col="white")
+         border="#69b3a2", col="white")
 ```
 
 #### neighbourhood_cleansed
 
-The neighbourhood as geocoded using the latitude and longitude against neighborhoods as defined by open or public digital shape files.
+The neighbourhood as geocoded using the latitude and longitude against neighborhoods as defined by open or public digital shape files. There are too many objects in this variable, so we will not create a plot for this.
 
 #### host_since
 
-Make a line plot
+The variable host_since reflects the date the host/user was created. For hosts that are Airbnb guests this could be the date they registered as a guest. The line plot below shows the number of new hosts per year which were listed in August 2021.
+
+```{r, echo= FALSE, results='hide', message= FALSE, warning=FALSE}
+# Load libraries
+library(dplyr)
+library(tibble)
+library(ggplot2)
+library(lubridate)
+
+# Create new data file as a table for dates
+dm <- read.table(text = listings0821$host_since, header = FALSE)
+
+dm$V1 <- ymd(dm$V1)
+
+dm$V2 <- as.Date(dm$V1, "%m/%d/%Y")
+dm$V2 <- format(dm$V2, "%Y")
+
+# Create a newe data frame from the table
+df_table <- as.data.frame(table(dm$V2))
+
+# Transform V1 into a numeric
+df_table$Var1 <- as.numeric(levels(df_table$Var1))[df_table$Var1] 
+
+# Plot
+ggplot(df_table, aes(x=Var1, y=Freq)) +
+  geom_line( color="steelblue") + 
+  geom_point() +
+  xlab("Year") +
+  ylab("Number of hosts") +
+  ggtitle("Number of hosts per year") +
+  scale_x_continuous(breaks = df_table$Var1) +
+  theme_minimal() +
+  theme(axis.text.x=element_text(angle=60, hjust=1))
+```
 
 #### host_is_superhost
 
+This variable shows whether the host of a listing has the superhost status. These are experienced hosts who are an example host for other hosts. The values of this variable show either t (= true) or f (= false).
+
+```{r, echo= FALSE, results='hide', message= FALSE, warning=FALSE}
+# Load the data
+all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
+
+# Create barplot
+counts <- table(all_data$host_is_superhost)
+barplot(counts, main="host is superhost",
+        border="#69b3a2", col="white")
+```
+
 #### host_identity_verified
+
+This variable shows whether the host of a listing is officially indentified. The values of this variable show either t (= true) or f (= false).
+
+```{r, echo= FALSE, results='hide', message= FALSE, warning=FALSE}
+# Load the data
+all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
+
+# Create barplot
+counts <- table(all_data$host_identity_verified)
+barplot(counts, main="host identity verified",
+        border="#69b3a2", col="white")
+```
+
