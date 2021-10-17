@@ -11,7 +11,7 @@ library(RColorBrewer)
 regulation_price <- read.csv(file = '../../gen/analysis/input/data_for_barplot.csv')
 regulation_price$regulation <- as.factor(regulation_price$regulation)
 
-
+# Create barplot 
 pdf("../../gen/analysis/output/prices_barplot.pdf")
 regulation_price %>% 
   ggplot(aes(x=regulation, y=price, fill = regulation)) +
