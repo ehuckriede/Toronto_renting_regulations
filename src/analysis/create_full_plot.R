@@ -8,12 +8,12 @@ library(recommenderlab)
 library(RColorBrewer)
 
 # --- Load Data --- #
-roomtype_price <- read.csv(file = '../../gen/analysis/input/data_for_full_plot.csv')
+roomtype_price <- read.csv(file = '../../gen/analysis/input/data_for_roomtype_plot.csv')
 
 #create plot
 roomtype_price$regulation <- as.factor(roomtype_price$regulation)
 
-pdf("../../gen/analysis/output/full_prices_plot.pdf")
+pdf("../../gen/analysis/output/roomtype_prices_plot.pdf")
 roomtype_price %>%
   ggplot(aes(x = room_type, y = price, fill = regulation)) +
   geom_bar(stat = "identity", position = "dodge2") +
