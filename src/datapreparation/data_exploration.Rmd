@@ -35,7 +35,7 @@ The variable "price" reflects the daily price in local currency.
 
 ### Control variables
 
-In order to ensure that the effect of the regulation on price is the only indicator in potential changes in price, we used several covariates in our research.
+In order to increase the accuracy of our research, we added several covariates to our research.
 
 #### room_type
 
@@ -93,10 +93,17 @@ write.csv(listings_merged, "../../gen/data-preparation/input/merged_data.csv", r
 # Load the data
 all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 
-# Create barplot
+# Create bar plot
 counts <- table(all_data$room_type)
-barplot(counts, main="room type",
-         border="#69b3a2", col="white")
+counts
+
+barplot(counts, main="Room type",
+        col = c("cadetblue3", "cadetblue1","coral3", "coral1" ),
+        xlab = "Room type",
+        ylab = "Number of objects",
+        legend = c("Entire home/apt", "Hotel room", "Private room", "Shared room"),
+        args.legend = list(title = "Room type", x = "topright",
+                           cex = .7)  ) 
 ```
 
 #### neighbourhood_cleansed
@@ -150,8 +157,16 @@ all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 
 # Create barplot
 counts <- table(all_data$host_is_superhost)
-barplot(counts, main="host is superhost",
-        border="#69b3a2", col="white")
+counts
+counts <- counts[-1] 
+
+barplot(counts, main="Host is superhost",
+        col = c(border="#69b3a2", col="white"),
+        xlab = "True or False",
+        ylab = "Number of objects",
+        legend = c("False", "True"),
+        args.legend = list(title = "Host is superhost", x = "topright",
+                           cex = .7))
 ```
 
 #### host_identity_verified
@@ -163,8 +178,16 @@ This variable shows whether the host of a listing is officially indentified. The
 all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
 
 # Create barplot
-counts <- table(all_data$host_identity_verified)
-barplot(counts, main="host identity verified",
-        border="#69b3a2", col="white")
+counts <- table(all_data$host_is_superhost)
+counts
+counts <- counts[-1] 
+
+barplot(counts, main="The identity of host verified",
+        col = c(border="#69b3a2", col="white"),
+        xlab = "True or False",
+        ylab = "Number of objects",
+        legend = c("False", "True"),
+        args.legend = list(title = "The identity of host verified", x = "topright",
+                           cex = .7))
 ```
 
