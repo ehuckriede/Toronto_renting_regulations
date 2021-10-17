@@ -11,9 +11,23 @@ library(dplyr)
 library(haven)
 ```
 
-## R Markdown
+## **Results linear regression**
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+To create the linear model, the cleaned dataset is loaded into the R script. Then, a linear model is made by using the price as the dependent variable, the regulation as the independent variable and then the different neighborhoods and roomtypes are added as covariates, as well as the other three dummy's: host_since_dummy, superhost_dummy and identity_verified_dummy. For a more elaborate explanation on these variables, please read the paper in the sourcecode datapreparation folder.
+
+When running this regression, the results are as follows: 
+```{r}
+cleaned_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
+price_lm <- lm(price ~ regulation + old_town + etobicoke + north_york + east_york + york + entire_home_apt + hotel_room + private_room + host_since_dummy + superhost_dummy + identity_verified_dummy, cleaned_data)
+summary(price_lm)
+```
+Here, it is directly noticeable that regulation has a significant, positive influence on the price. All covariates, except for the identity_verified_dummy, also have a significant influence on the listing price. From this, it can be concluded that not only regulation has had a significant impact on the price, but these covariates as well. However, these effects can also go hand in hand; when the regulation was made official, the offer for several room types such as entire homes or apartments would significantly decrease, as way less people could offer such accommodation. The scarcity for this room type can also lead to an increase in price. 
+
+*Note that for example, not all neighborhoods and room_type have a significant influence on the price. However, to draw the conclusion that being in a specific neighborhood and having a specific room type to offer has a significant impact on the price, having one significant dummy is already enough, as this shows that at least one neighborhood or roomtype is significant for the price.* 
+
+## **Data retrieval for the plots**
+
+To obtain the data for all the plots created 
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
