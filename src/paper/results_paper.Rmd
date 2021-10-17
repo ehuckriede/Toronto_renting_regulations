@@ -10,6 +10,11 @@ knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(haven)
 library(tidyverse)
+library(ggplot2)
+library(gapminder)
+library(knitr)
+library(recommenderlab)
+library(RColorBrewer)
 ```
 
 ## **Results linear regression**
@@ -95,12 +100,24 @@ write.csv(roomtype_price, "../../gen/analysis/input/data_for_roomtype_plot.csv",
 ```
 
 
-## Including Plots
+## **Barplots**
+### **Barplot general prices**
+The following plot has been made based on the data retrieved. This plot visually represents the mean price increase before and after the regulation. 
 
-You can also embed plots, for example:
+```{r, echo=FALSE}
+# --- Load Data --- #
+regulation_price <- read.csv(file = '../../gen/analysis/input/data_for_barplot.csv')
+regulation_price$regulation <- as.factor(regulation_price$regulation)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+# Create barplot 
+regulation_price %>% 
+  ggplot(aes(x=regulation, y=price, fill = regulation)) +
+  geom_bar(stat = "identity", position = "dodge2") + 
+  xlab("Before or After Regulation") + ylab("Mean Price") + 
+  ggtitle("Mean Price before and after regulation") + 
+  theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) + 
+  guides(fill = guide_legend(title = "Regulation")) + 
+  scale_fill_discrete(labels = c("Before Regulation", "After Regulation")) + geom_col()
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
