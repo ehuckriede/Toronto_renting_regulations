@@ -1,0 +1,201 @@
+---
+title: "Data exploration Toronto renting regulations"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data retrieval
+
+We retrieved our data from the following [website](http://insideairbnb.com/get-the-data.html). The goal of our research is to figure out whether the implemented renting market regulations have an effect on the rental prices on AirBnB in Toronto. In case this has a negative effect, then this regulation could also be suggested for other cities facing similar problems as Toronto did.
+
+The website provides data files with a lot of information on AirBnB in Toronto per month for the time period of a year. In order to inspect the effect of the regulation, we retrieved two data files:
+  1. Information on listings in Toronto of August 2020
+  2. Information on listings in Toronto of August 2021
+
+## Data merging
+
+We want to compare the information on listings prior to the regulations and after the regulations. Therefore, it is important to merge to two data files that we retrieved before we do any data preparation. The variable "regulation" is created as a dummy variable for this first. After that, we can merge the two data sets into a data set that we can use to further prepare the data for analysis.
+
+## Data exploration
+
+In order to understand the research, it is important to be well informed about the variables in the data. The data consists out of 75 variables which give different information on the AirBnB listings in Toronto. Multiple variables are used in our analysis. There is more information given about the variables used in our research below. Most information is retrieved from the Inside AirBnB Data dictionary which is given on the previously named website.
+
+### Variables used for main research
+
+#### Regulation
+
+The created dummy variable "Regulation" indicates whether the information about the listing comes from prior to the regulation or after the regulation. The value 0 indicates the moment prior to the regulation (August, 2020), while the value 1 indicates the moment after the regulation (August, 2021).
+
+#### Price
+
+The variable "price" reflects the daily price in local currency.
+
+### Control variables
+
+In order to increase the accuracy of our research, we added several covariates to our research.
+
+#### room_type
+
+All homes are grouped into the following four room types:
+  1. entire home/apt
+  2. hotel room
+  3. shared room
+  4. private room
+
+```{r, echo= FALSE, results='hide', message= FALSE, warning=FALSE}
+# Load Libraries
+library(googledrive)
+library(readr)
+
+dir.create('../../data')
+
+#listings august 2020
+data_id <- "1f3L-KHmC89xcn7LIMpGsfwh8zMu8orPE"
+out_file <- "../../data/listings0820.csv"
+
+drive_download(
+    as_id(data_id), 
+    path = out_file, 
+    overwrite = TRUE)
+
+#listings august 2021
+data_id2 <- "11Xy7UtyZaYsOfU4xIDeLA_syv1WFeDV4"
+out_file2 <- "../../data/listings0821.csv"
+
+drive_download(
+    as_id(data_id2), 
+    path = out_file2, 
+    overwrite = TRUE)
+
+# Load Data
+listings0820 <- read.csv("../../data/listings0820.csv")
+listings0821 <- read.csv("../../data/listings0821.csv")
+
+#Create dummy variable 'regulation' in both datasets. 
+# Dummy variable = 0 for dataset before regulation
+# Dummy variable = 1 for dataset after regulation
+
+listings0820$regulation <- 0
+listings0821$regulation <- 1
+
+#Merge datasets together to be able to perform analysis
+listings_merged <- merge(listings0820, listings0821, all.x=TRUE, all.y=TRUE)
+
+# Write output
+dir.create('../../gen')
+dir.create('../../gen/data-preparation')
+dir.create('../../gen/data-preparation/input')
+write.csv(listings_merged, "../../gen/data-preparation/input/merged_data.csv", row.names = FALSE)
+
+# Load the data
+all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
+
+# Create bar plot
+counts <- table(all_data$room_type)
+counts
+
+pdf("../../gen/data-preparation/output/roomtype_count_barplot.pdf")
+barplot(counts, main="Room type",
+        col = c("cadetblue3", "cadetblue1","coral3", "coral1" ),
+        xlab = "Room type",
+        ylab = "Number of objects",
+        legend = c("Entire home/apt", "Hotel room", "Private room", "Shared room"),
+        args.legend = list(title = "Room type", x = "topright",
+                           cex = .7)  ) 
+dev.off()
+```
+
+#### neighbourhood_cleansed
+
+The neighbourhood as geocoded using the latitude and longitude against neighborhoods as defined by open or public digital shape files. There are too many objects in this variable, so we will not create a plot for this.
+
+#### host_since
+
+The variable host_since reflects the date the host/user was created. For hosts that are Airbnb guests this could be the date they registered as a guest. The line plot below shows the number of new hosts per year which were listed in August 2021.
+
+```{r, echo= FALSE, results='hide', message= FALSE, warning=FALSE}
+# Load libraries
+library(dplyr)
+library(tibble)
+library(ggplot2)
+library(lubridate)
+
+# Create new data file as a table for dates
+dm <- read.table(text = listings0821$host_since, header = FALSE)
+
+dm$V1 <- ymd(dm$V1)
+
+dm$V2 <- as.Date(dm$V1, "%m/%d/%Y")
+dm$V2 <- format(dm$V2, "%Y")
+
+# Create a newe data frame from the table
+df_table <- as.data.frame(table(dm$V2))
+
+# Transform V1 into a numeric
+df_table$Var1 <- as.numeric(levels(df_table$Var1))[df_table$Var1] 
+
+# Plot
+pdf("../../gen/data-preparation/output/host_listing_plot.pdf")
+ggplot(df_table, aes(x=Var1, y=Freq)) +
+  geom_line( color="steelblue") + 
+  geom_point() +
+  xlab("Year") +
+  ylab("Number of hosts") +
+  ggtitle("Number of hosts per year") +
+  scale_x_continuous(breaks = df_table$Var1) +
+  theme_minimal() +
+  theme(axis.text.x=element_text(angle=60, hjust=1))
+dev.off()
+```
+
+#### host_is_superhost
+
+This variable shows whether the host of a listing has the superhost status. These are experienced hosts who are an example host for other hosts. The values of this variable show either t (= true) or f (= false).
+
+```{r, echo= FALSE, results='hide', message= FALSE, warning=FALSE}
+# Load the data
+all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
+
+# Create barplot
+counts <- table(all_data$host_is_superhost)
+counts
+counts <- counts[-1] 
+
+pdf("../../gen/data-preparation/output/host_super_plot.pdf")
+barplot(counts, main="Host is superhost",
+        col = c(border="#69b3a2", col="white"),
+        xlab = "True or False",
+        ylab = "Number of objects",
+        legend = c("False", "True"),
+        args.legend = list(title = "Host is superhost", x = "topright",
+                           cex = .7))
+dev.off()
+```
+
+#### host_identity_verified
+
+This variable shows whether the host of a listing is officially indentified. The values of this variable show either t (= true) or f (= false).
+
+```{r, echo= FALSE, results='hide', message= FALSE, warning=FALSE}
+# Load the data
+all_data <- read.csv(file = '../../gen/data-preparation/input/merged_data.csv')
+
+# Create barplot
+counts <- table(all_data$host_is_superhost)
+counts
+counts <- counts[-1] 
+
+pdf("../../gen/data-preparation/output/host_identity_plot.pdf")
+barplot(counts, main="The identity of host verified",
+        col = c(border="#69b3a2", col="white"),
+        xlab = "True or False",
+        ylab = "Number of objects",
+        legend = c("False", "True"),
+        args.legend = list(title = "The identity of host verified", x = "topright",
+                           cex = .7))
+dev.off()
+```
+
