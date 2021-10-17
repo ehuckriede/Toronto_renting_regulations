@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## *Data retrieval*
+## Data retrieval
 
 We retrieved our data from the following [website](http://insideairbnb.com/get-the-data.html). The goal of our research is to figure out whether the implemented renting market regulations have an effect on the rental prices on AirBnB in Toronto. In case this has a negative effect, then this regulation could also be suggested for other cities facing similar problems as Toronto did.
 
