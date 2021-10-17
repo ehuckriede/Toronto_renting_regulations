@@ -12,4 +12,4 @@ roomtype_price <- all_data %>%
   summarise(price = mean(price))
 
 dir.create('../../gen/analysis/input/', recursive = T)
-write.csv(roomtype_price, "../../gen/analysis/input/data_for_full_plot.csv", row.names = FALSE)
+write.csv(roomtype_price, "../../gen/analysis/input/data_for_roomtype_plot.csv", row.names = FALSE)
