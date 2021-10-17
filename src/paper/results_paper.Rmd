@@ -162,4 +162,4 @@ roomtype_price %>%
 The barplot shows that for every room type, except hotel room, prices increase after the regulation. That does make sense, because the regulation mainly effects the entire homes or appartments, or the private/shared rooms within someones house.
 
 ## **Overall conclusion**
-By means of this linear regression and the barplots, it can be 
+By means of this linear regression and the barplots, it can be concluded that the regulation definitely has had its effect on the listing price of AirBnB's. The regulation was not the only significant influence for the price increase, however, the effects of the regulation and the other significant impacts on the increase in price can be related to each other, as explained earier. Therefore, it can be concluded that this regulation definitely played a role in the increase in the prices. However, the linear regression model only explains 2.7% of the total variance. Other researchers can build further on this report to find out what caused the other variance in price. The influence of COVID-19 can be a very interesting angle to look at this data. 
