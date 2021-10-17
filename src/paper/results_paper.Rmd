@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(haven)
+library(tidyverse)
 ```
 
 ## **Results linear regression**
@@ -25,15 +26,74 @@ Here, it is directly noticeable that regulation has a significant, positive infl
 
 *Note that for example, not all neighborhoods and room_type have a significant influence on the price. However, to draw the conclusion that being in a specific neighborhood and having a specific room type to offer has a significant impact on the price, having one significant dummy is already enough, as this shows that at least one neighborhood or roomtype is significant for the price.* 
 
-## **Data retrieval for the plots**
+## **Data visualization**
+### **Data retrieval plots**
+To obtain the data for all the plots created, several files were created for the specific plots. 
 
-To obtain the data for all the plots created 
+#### **General barplot**
+First, a general barplot will be made, which will just show the increase in price before and after te regulation. This result will be shared in the Github Readme, as it is the most concise conclusion. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+The following code is used for the general barplot. The results of this data are written to a csv file to make the data easily accessible in other files.
+```{r}
+# --- Load Data --- #
+all_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
 
-```{r cars}
-summary(cars)
+# --- Data for Plot 3 --- #
+
+regulation_price <- all_data %>%
+  group_by(regulation) %>%
+  summarise(price = mean(price))
+
+write.csv(regulation_price, "../../gen/analysis/input/data_for_barplot.csv", row.names = FALSE)
 ```
+
+####**Neighborhood plot**
+Next, also a barplot containing the price difference per neighborhood is included. The structure of this data retrieval code is a bit more complex, as the data has to be pivoted into a long format first. In the end, a dataset containing the neighborhoods and the regulation, summarized by the means, has been created. This dataset is once again written to a csv file. 
+
+```{r}
+# --- Load Data --- #
+neighborhood_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
+
+# --- Data for Plot 3 --- #
+# Transform neighborhood_data into a pivot long format
+neighborhoods_long <- neighborhood_data %>% 
+  pivot_longer(cols = old_town:scarborough,
+               names_to = "neighborhood",
+               values_to = "neigbhorhood_logical")
+
+# Transform the neighborhood_logical column to actual logical values
+neighborhoods_long <- neighborhoods_long %>%
+  mutate(as.logical(neigbhorhood_logical))
+
+# Filter out the FALSE values
+neighborhoods_long <- neighborhoods_long %>% 
+  filter(`as.logical(neigbhorhood_logical)`) %>% 
+  select(-`as.logical(neigbhorhood_logical)`) 
+
+# Summarise the means of every type of neighborhood before and after regulation
+neighborhoods_price_long <- neighborhoods_long %>% 
+  group_by(neighborhood, regulation) %>%
+  summarise(price = mean(price))
+
+write.csv(neighborhoods_price, "../../gen/analysis/input/data_for_plot_neighborhoods.csv", row.names = FALSE)
+```
+#### **Room type plot**
+Last, we also include a plot that visualizes the difference in prices before and after the regulation for the room types. The retrieval of the data has been done in a similar way. 
+
+```{r}
+# --- Load Data --- #
+all_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
+
+# --- Data for Plot 1 --- #
+
+roomtype_price <- all_data %>%
+  group_by(room_type, regulation) %>%
+  summarise(price = mean(price))
+
+dir.create('../../gen/analysis/input/', recursive = T)
+write.csv(roomtype_price, "../../gen/analysis/input/data_for_roomtype_plot.csv", row.names = FALSE)
+```
+
 
 ## Including Plots
 
