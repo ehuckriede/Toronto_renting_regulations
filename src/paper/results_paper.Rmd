@@ -119,5 +119,26 @@ regulation_price %>%
   guides(fill = guide_legend(title = "Regulation")) + 
   scale_fill_discrete(labels = c("Before Regulation", "After Regulation")) + geom_col()
 ```
+### **Barplot neighborhoods**
+The results of the barplot of the neighborhoods ook like this:
+```{r, echo=FALSE}
+# --- Load Data --- #
+neighborhoods_price <- read.csv(file = '../../gen/analysis/input/data_for_plot_neighborhoods.csv')
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+#create plot
+neighborhoods_price_long$regulation <- as.factor(neighborhoods_price_long$regulation)
+neighborhoods_price_long$neighborhood <- as.factor(neighborhoods_price_long$neighborhood)
+
+neighborhoods_price_long %>% 
+  ggplot(aes(x = neighborhood, y = price, fill = regulation)) +
+  geom_bar(stat = "identity", position = "dodge2") +
+  xlab("Neighborhood") +
+  ylab("Price per Night") +
+  ggtitle("Price per Neighborhood", subtitle = "Before and After Regulation") +
+  guides(fill = guide_legend(title = "Regulation")) +
+  theme_minimal() + scale_fill_discrete(labels = c("Before Regulation", "After Regulation"))
+```
+You can see that the prices in the Old Town of Toronto are affected most by the regulation. Except for Etobicoke and North York prices go up slightly, but not such a large difference as for Old Town. This does make sense, as Old Town is the most important neighborhood for tourists and thus, prices are more sensitive. 
+
+### **Barplot room types**
+Last, a barplot for the room types also has been created. 
