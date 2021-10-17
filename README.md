@@ -36,7 +36,7 @@ With use of this linear regression, it is therefore easy to see which effect the
 
 **Results**
 
-The following results conclude our research: the prices go up after the regulation has been implemented: 11,5% price increase. This is visually represented in the bar plot below.
+The following results conclude our research: the prices go up after the regulation has been implemented: 9.4% price increase. This is visually represented in the bar plot below.
 
 *Plotted difference in mean price before and after regulation*
 
