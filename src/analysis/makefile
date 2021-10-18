@@ -2,7 +2,7 @@ INPUT = ../../gen/analysis/input
 RESULT = ../../gen/analysis/output
 
 
-all: $(RESULT)/linear_regression.txt $(INPUT)/data_for_plot_neighborhoods.csv  $(INPUT)/data_for_roomtype_plot.csv $(INPUT)/data_for_barplot.csv $(RESULT)/neighborhoods_prices_plot.pdf $(RESULT)/roomtype_prices_plot.pdf $(RESULT)/prices_barplot.pdf 
+all: $(RESULT)/linear_regression.txt $(INPUT)/data_for_plot_neighborhoods.csv  $(INPUT)/data_for_roomtype_plot.csv $(INPUT)/data_for_barplot.csv $(RESULT)/table_host_dummies.pdf $(RESULT)/neighborhoods_prices_plot.pdf $(RESULT)/roomtype_prices_plot.pdf $(RESULT)/prices_barplot.pdf 
 
 $(RESULT)/linear_regression.txt: linear_model.R
 	R --vanilla < linear_model.R
@@ -15,6 +15,9 @@ $(INPUT)/data_for_roomtype_plot.csv: get_data_for_roomtype_plot.R
 
 $(INPUT)/data_for_barplot.csv: get_data_for_barplot.R
 	R --vanilla < get_data_for_barplot.R
+
+$(RESULT)/table_host_dummies.pdf: get_data_for_table_dummies.R
+	R --vanilla < get_data_for_table_dummies.R
 
 $(RESULT)/neighborhoods_prices_plot.pdf: create_neighborhood_plot.R
 	R --vanilla < create_neighborhood_plot.R
