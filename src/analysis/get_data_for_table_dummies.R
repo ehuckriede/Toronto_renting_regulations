@@ -7,7 +7,7 @@ host_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv
 
 # --- Table 1 --- #
 
-# Make datasetd
+# Make dataset
 host_price <- host_data %>%
   group_by(host_since_dummy, superhost_dummy, regulation) %>%
   summarise(price = mean(price)) 
