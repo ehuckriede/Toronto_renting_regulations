@@ -19,7 +19,6 @@ library(recommenderlab)
 library(RColorBrewer)
 library(gridExtra)
 ```
-
 ## **Results linear regression**
 
 To create the linear model, the cleaned dataset is loaded into the R script. Then, a linear model is made by using the price as the dependent variable, the regulation as the independent variable and then the different neighborhoods and room types are added as covariates, as well as the other three dummy's: host_since_dummy, superhost_dummy and identity_verified_dummy. For a more elaborate explanation on these variables, please read the paper in the source code datapreparation folder.
@@ -27,12 +26,17 @@ To create the linear model, the cleaned dataset is loaded into the R script. The
 When running this regression, the results are as follows: 
 ```{r}
 cleaned_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
-price_lm <- lm(price ~ regulation + old_town + etobicoke + north_york + east_york + york + entire_home_apt + hotel_room + private_room + host_since_dummy + superhost_dummy + identity_verified_dummy, cleaned_data)
+price_lm <- lm(price ~ regulation + old_town + etobicoke + north_york + east_york + york + 
+                 entire_home_apt + hotel_room + private_room +
+                 host_since_dummy + superhost_dummy + 
+                 identity_verified_dummy, cleaned_data)
+
 summary(price_lm)
 ```
 Here, it is directly noticeable that regulation has a significant, positive influence on the price. All covariates, except for the identity_verified_dummy, also have a significant influence on the listing price. From this, it can be concluded that not only regulation has had a significant impact on the price, but these covariates as well. However, these effects can also go hand in hand; when the regulation was made official, the offer for several room types such as entire homes or apartments would significantly decrease, as way less people could offer such accommodation. The scarcity for this room type can also lead to an increase in price. 
 
 *Note that for example, not all neighborhoods and room_type have a significant influence on the price. However, to draw the conclusion that being in a specific neighborhood and having a specific room type to offer has a significant impact on the price, having one significant dummy is already enough, as this shows that at least one neighborhood or room type is significant for the price.* 
+\newpage
 
 ## **Data visualization**
 
@@ -40,9 +44,9 @@ Here, it is directly noticeable that regulation has a significant, positive infl
 
 To obtain the data for all the plots created, several files were created for the specific plots. 
 
-#### **General barplot**
+### **General barplot**
 
-First, a general barplot will be made, which will just show the increase in price before and after te regulation. This result will be shared in the Github Readme, as it is the most concise conclusion. 
+First, a general barplot will be made, which will just show the increase in price before and after the regulation. This result will be shared in the Github Readme, as it is the most concise conclusion. 
 
 The following code is used for the general barplot. The results of this data are written to a csv file to make the data easily accessible in other files.
 
@@ -56,14 +60,15 @@ regulation_price <- all_data %>%
   group_by(regulation) %>%
   summarise(price = mean(price))
 
-write.csv(regulation_price, "../../gen/analysis/input/data_for_barplot.csv", row.names = FALSE)
+write.csv(regulation_price, "../../gen/analysis/input/data_for_barplot.csv", row.names =
+            FALSE)
 ```
 
-####**Neighborhood plot**
+### **Neighborhood plot**
 
-Next, also a barplot containing the price difference per neighborhood is included. The structure of this data retrieval code is a bit more complex, as the data has to be pivoted into a long format first. In the end, a dataset containing the neighborhoods and the regulation, summarized by the means, has been created. This dataset is once again written to a csv file. 
+Next, also a barplot containing the price difference per neighborhood is included. The structure of this data retrieval code is a bit more complex, as the data has to be pivoted into a long format first. In the end, a data set containing the neighborhoods and the regulation, summarized by the means, has been created. This data set is once again written to a csv file. 
 
-```{r}
+```{r, echo = FALSE}
 # --- Load Data --- #
 neighborhood_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
 
@@ -88,11 +93,12 @@ neighborhoods_price_long <- neighborhoods_long %>%
   group_by(neighborhood, regulation) %>%
   summarise(price = mean(price))
 
-write.csv(neighborhoods_price_long, "../../gen/analysis/input/data_for_plot_neighborhoods.csv", row.names = FALSE)
+write.csv(neighborhoods_price_long, "../../gen/analysis/input/data_for_plot_neighborhoods.csv",
+          row.names = FALSE)
 
 ```
 
-#### **Room type plot**
+### **Room type plot**
 
 Last, we also include a plot that visualizes the difference in prices before and after the regulation for the room types. The retrieval of the data has been done in a similar way. 
 
@@ -108,9 +114,11 @@ roomtype_price <- all_data %>%
   summarise(price = mean(price))
 
 dir.create('../../gen/analysis/input/', recursive = T)
-write.csv(roomtype_price, "../../gen/analysis/input/data_for_roomtype_plot.csv", row.names = FALSE)
+write.csv(roomtype_price, "../../gen/analysis/input/data_for_roomtype_plot.csv", 
+          row.names = FALSE)
 ```
 
+\newpage
 
 ## **Barplots**
 
@@ -133,9 +141,15 @@ regulation_price %>%
   guides(fill = guide_legend(title = "Regulation")) + 
   scale_fill_discrete(labels = c("Before Regulation", "After Regulation")) + geom_col()
 ```
-### **Barplot neighborhoods**
+As you can see, the average price increased after the regulation was implemented. It is not an enormously large increase, however, in such an overheated market as the one AirBnB is in, it can definitely have a larger impact than it seems. On the next pages, the impact of the covariates will be evaluated. 
 
-The results of the barplot of the neighborhoodslook like this:
+\newpage
+
+### **Barplot neighborhoods**
+To show the price difference for the different neighborhoods before and after the regulation, a barplot visualization has been chosen. A barplot allows for easy scanning and it shows the differences in price between each neighborhood before and after the regulation clearly. 
+
+The barplot for the neighborhoods shows as follows:
+
 
 ```{r, echo=FALSE}
 # --- Load Data --- #
@@ -154,13 +168,15 @@ neighborhoods_price_long %>%
   guides(fill = guide_legend(title = "Regulation")) +
   theme_minimal() + scale_fill_discrete(labels = c("Before Regulation", "After Regulation"))
 ```
-You can see that the prices in the Old Town of Toronto are affected most by the regulation. Except for Etobicoke and North York prices go up slightly, but not such a large difference as for Old Town. This does make sense, as Old Town is the most important neighborhood for tourists and thus, prices are more sensitive. 
+
+You can see that the prices in the Old Town of Toronto are affected most by the regulation. Except for Etobicoke and North York prices go up slightly, but not such a large difference as for Old Town. This does make sense, as Old Town is the most important neighborhood for tourists, as the neighborhoods located within the Old Town are in the city center. Therefore, the prices can be more sensitive than for example neighborhoods in the suburbs.
+\newpage
 
 ### **Barplot room types**
 
-A barplot for the room types also has been created. 
+To visualize the price differences per room type, a barplot is chosen as well for similar reasons as for the neighborhood barplot. The barplot is plotted below. 
 
-```{r, }
+```{r, echo = FALSE}
 # --- Load Data --- #
 roomtype_price <- read.csv(file = '../../gen/analysis/input/data_for_roomtype_plot.csv')
 
@@ -178,13 +194,14 @@ roomtype_price %>%
 
 ```
 
-The barplot shows that for every room type, except hotel room, prices increase after the regulation. That does make sense, because the regulation mainly effects the entire homes or apartments, or the private/shared rooms within someones house.
+As you can see, prices in crease after the regulation for every room type, except hotel. That does make sense, because the regulation mainly effects the entire homes or apartments, or the private/shared rooms within someones house. Hotel rooms are not included abundantly in the AirBnB listings, so that is another reason why the prices can be lower after the regulation. 
+\newpage
 
-### **Table dummies**
+###  **Table dummies**
 
 Lastly, a table for the dummy variables has been created. Instead of a barplot, we chose for a table, since we believe that a table can more clearly represent the differences in the price for the host dummy variables. In this table, the identity_verified_dummy has not been included, as this dummy proved no significant impact on the price. 
 
-```{r}
+```{r echo = T, results = 'hide'}
 # --- Load Data --- #
 host_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
 
