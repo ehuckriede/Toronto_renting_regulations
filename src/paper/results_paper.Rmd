@@ -122,7 +122,7 @@ write.csv(roomtype_price, "../../gen/analysis/input/data_for_roomtype_plot.csv",
 
 ## **Barplots**
 
-### **Barplot general prices**
+### **Barplot prices**
 
 The following plot has been made based on the data retrieved. This plot visually represents the mean price increase before and after the regulation. 
 
