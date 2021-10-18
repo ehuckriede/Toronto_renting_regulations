@@ -6,7 +6,7 @@ library(haven)
 # --- Load Data --- #
 neighborhood_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
 
-# --- Data for Plot 3 --- #
+# --- Data for Plot 2 --- #
 # Transform neighborhood_data into a pivot long format
 neighborhoods_long <- neighborhood_data %>% 
   pivot_longer(cols = old_town:scarborough,
