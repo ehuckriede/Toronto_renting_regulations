@@ -5,7 +5,7 @@ library(haven)
 # --- Load Data --- #
 all_data <- read.csv(file = '../../gen/data-preparation/output/cleaned_data.csv')
 
-# --- Data for Plot 1 --- #
+# --- Data for Plot 3 --- #
 
 roomtype_price <- all_data %>%
   group_by(room_type, regulation) %>%
