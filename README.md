@@ -85,9 +85,10 @@ During this project, multiple subdirectories were used. Within the subdirectory 
 6. src/analysis/get_data_for_neighborhood_plot.R
 7. src/analysis/get_data_for_roomtype_plot.R
 8. src/analysis/get_data_for_barplot.R
-9. src/analysis/create_neighborhood_plot.R
-10. src/analysis/create_roomtype_plot.R
-11. src/analysis/create_prices_barplot.R
+9. src/analysis/get_data_for_table_dummies.R
+10. src/analysis/create_neighborhood_plot.R
+11. src/analysis/create_roomtype_plot.R
+12. src/analysis/create_prices_barplot.R
 
 This makefile thus runs the code in the "src/datapreparation" and "src/analysis" folder. Running this code will obtain two new folders within the repository: "data/" and "gen/". The raw data obtained by the "get_data.R" code will be stored within the "data/" folder. Temporary folders within the datapreparation will be put in gen/datapreparation/input. The final output file of the datapreparation code, which is a merged, transformed and cleaned dataset, is consequently stored in gen/datapreparation/output. 
 Then, the get_data files within the "src/analysis" folder will obtain smaller datasets which will later on be used to obtain the final output graphs. These datasets will be stored in "gen/analysis/input", whereas the final output graphs will be stored in "gen/analysis/output".
