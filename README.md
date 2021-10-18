@@ -64,7 +64,7 @@ The R-squared value is also included in this linear regression. This value is no
 
 This repository contains the following files/folders:
 
-- "src" folder: This folder includes all the code that is needed to download, transform and analyze the data of [Inside AirBnb](http://insideairbnb.com/toronto). Within the "src" folder you will find subfolders seperating between data preparation, data exploration, analyzing and paper. In the subfolders datapreparation and analysis you will find all the code to run the corresponding folder, including a makefile per subfolder which make it possible to run all the code included in the specific folder in the right order instead of you manually loading every script. This will save a lot of time.  In the subfolders data_exploration and paper you will find two Rmd files. 
+- "src" folder: This folder includes all the code that is needed to download, transform and analyze the data of [Inside AirBnb](http://insideairbnb.com/toronto). Within the "src" folder you will find subfolders seperating between data preparation, data exploration, analyzing and paper. In the subfolders datapreparation and analysis you will find all the code to run the corresponding folder, including a makefile per subfolder which make it possible to run all the code included in the specific folder in the right order instead of you manually loading every script. This will save a lot of time.  In the subfolders data_exploration and paper you will find two Rmd files. The paper folder also contains the pdf output of the "Results" Rmd file. 
 
 - Gitignore: This file specifies files that should be ignored/untracked.
 
